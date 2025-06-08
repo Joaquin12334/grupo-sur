@@ -456,6 +456,13 @@ header {
   margin: 0.5rem 0 0;
   line-height: 1.4;
 }
+.map-info-window img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
 
 /* === SERVICES === */
 #services .card {
