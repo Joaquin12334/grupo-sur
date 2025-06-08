@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Grupo Sur del Perú SAC</title>
-  <meta name="theme-color" content="#1a1a1a">
+  <title data-key="title">Grupo Sur del Perú SAC</title>
+  <meta name="theme-color" content="#282829">
   <link rel="icon" type="image/png" href="iconow.png">
 
   <!-- Google Fonts -->
@@ -20,297 +20,779 @@
 </head>
 <body>
 
-  <!-- Offcanvas Right‐Side Menu with Blur -->
-  <div class="offcanvas offcanvas-end offcanvas-fullscreen" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+  <!-- Offcanvas Menu (No Blur on Menu) -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
     <div class="offcanvas-header border-0">
-      <h5 class="offcanvas-title text-white" id="offcanvasMenuLabel">Menú</h5>
-      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+      <h5 class="offcanvas-title" id="offcanvasMenuLabel" data-key="menu">Menú</h5>
+      <button type="button" class="btn-close btn-close-white me-3" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
     </div>
-    <div class="offcanvas-body d-flex flex-column justify-content-center align-items-center">
-      <ul class="nav flex-column text-center">
-        <li class="nav-item"><a class="nav-link py-3" href="#about" data-bs-dismiss="offcanvas">Nosotros</a></li>
-        <li class="nav-item"><a class="nav-link py-3" href="#services" data-bs-dismiss="offcanvas">Servicios</a></li>
-        <li class="nav-item"><a class="nav-link py-3" href="#equipment" data-bs-dismiss="offcanvas">Equipo</a></li>
-        <li class="nav-item"><a class="nav-link py-3" href="#projects" data-bs-dismiss="offcanvas">Proyectos</a></li>
-        <li class="nav-item"><a class="nav-link py-3" href="#contact" data-bs-dismiss="offcanvas">Contacto</a></li>
+    <div class="offcanvas-body">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="#about" data-bs-dismiss="offcanvas" data-key="menu_about">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#mission" data-bs-dismiss="offcanvas" data-key="menu_mission">Misión & Visión</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#values" data-bs-dismiss="offcanvas" data-key="menu_values">Valores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#history" data-bs-dismiss="offcanvas" data-key="menu_history">Historia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#presence" data-bs-dismiss="offcanvas" data-key="menu_presence">Presencia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services" data-bs-dismiss="offcanvas" data-key="menu_services">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#equipment" data-bs-dismiss="offcanvas" data-key="menu_equipment">Equipo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#polvorines" data-bs-dismiss="offcanvas" data-key="menu_polvorines">Polvorines</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#certifications" data-bs-dismiss="offcanvas" data-key="menu_certifications">Certificaciones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects" data-bs-dismiss="offcanvas" data-key="menu_projects">Proyectos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#team" data-bs-dismiss="offcanvas" data-key="menu_team">Equipo Humano</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact" data-bs-dismiss="offcanvas" data-key="menu_contact">Contacto</a>
+        </li>
       </ul>
     </div>
   </div>
 
-  <!-- Navbar -->
-  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top py-2">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="logo1.png" alt="Logo Grupo Sur" height="50" class="me-2">
-      </a>
-      <div class="d-flex align-items-center">
-        <!-- Dark/Light Toggle -->
-        <button id="themeToggle" class="btn btn-link btn-sm p-1 me-3" aria-label="Cambiar tema">
-          <i class="bi bi-moon-fill fs-4 text-light"></i>
-        </button>
-        <!-- Offcanvas Toggle -->
-        <button class="btn btn-outline-light btn-menu p-2" type="button"
-                data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu"
-                aria-label="Abrir menú">
-          <div class="hamburger">
-            <span></span><span></span><span></span>
-          </div>
-        </button>
-      </div>
+  <!-- Navbar (Semi-Transparent, Blur Background) -->
+<nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
+  <div class="container d-flex align-items-center justify-content-between">
+    <a class="navbar-brand d-flex align-items-center" href="#home">
+      <img src="logo1.png" alt="Logo Grupo Sur" height="50" class="me-2">
+      <!-- (no cambia el texto aquí) -->
+    </a>
+    <div class="d-flex align-items-center">
+      <!-- Language Toggle -->
+      <button id="langToggle" class="btn btn-link btn-sm p-1 me-3" aria-label="Cambiar idioma">
+        <i class="bi bi-translate fs-4" id="iconLang" style="color: #D63438;"></i>
+      </button>
+      <!-- Dark/Light Toggle -->
+      <button id="themeToggle" class="btn btn-link btn-sm p-1 me-3" aria-label="Cambiar tema">
+        <i class="bi bi-moon-fill fs-4" id="iconTheme" style="color: #D63438;"></i>
+      </button>
+      <!-- Offcanvas Toggle -->
+      <button class="btn btn-link btn-sm p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Abrir menú">
+        <i class="bi bi-list fs-4" id="iconMenu" style="color: #D63438;"></i>
+      </button>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- Hero Carousel -->
-  <section id="heroCarousel" class="carousel slide carousel-fade vh-100" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
-    </div>
-    <div class="carousel-inner h-100">
-      <!-- Slide 1 -->
-      <div class="carousel-item active h-100">
-        <div class="overlay"></div>
-        <img src="slide1-0.jpeg" class="w-100 h-100 object-fit-cover" alt="Innovación en Perforación">
-        <div class="carousel-caption d-flex h-100 align-items-center justify-content-center text-center px-3" data-aos="zoom-in">
-          <div class="slide-text">
-            <h1 class="display-4 fw-bold">Innovación en Perforación</h1>
-            <p class="lead">Flota hidráulica de última generación.</p>
-            <a href="#services" class="btn btn-lg btn-outline-light mt-3">Ver Servicios</a>
-          </div>
-        </div>
-      </div>
-      <!-- Slide 2 -->
-      <div class="carousel-item h-100">
-        <div class="overlay"></div>
-        <img src="slide2-0.jpeg" class="w-100 h-100 object-fit-cover" alt="Seguridad en Voladuras">
-        <div class="carousel-caption d-flex h-100 align-items-center justify-content-center text-center px-3" data-aos="zoom-in" data-aos-delay="200">
-          <div class="slide-text">
-            <h1 class="display-4 fw-bold">Seguridad en Voladuras</h1>
-            <p class="lead">Protocolos certificados SUCAMEC.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Slide 3 -->
-      <div class="carousel-item h-100">
-        <div class="overlay"></div>
-        <img src="slide3-0.jpeg" class="w-100 h-100 object-fit-cover" alt="Instalación de Polvorines">
-        <div class="carousel-caption d-flex h-100 align-items-center justify-content-center text-center px-3" data-aos="zoom-in" data-aos-delay="400">
-          <div class="slide-text">
-            <h1 class="display-4 fw-bold">Instalación de Polvorines</h1>
-            <p class="lead">Diseño y construcción segura.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Slide 4 -->
-      <div class="carousel-item h-100">
-        <div class="overlay"></div>
-        <img src="slide4-0.jpeg" class="w-100 h-100 object-fit-cover" alt="Asesoría Técnica">
-        <div class="carousel-caption d-flex h-100 align-items-center justify-content-center text-center px-3" data-aos="zoom-in" data-aos-delay="600">
-          <div class="slide-text">
-            <h1 class="display-4 fw-bold">Asesoría Técnica</h1>
-            <p class="lead">Optimiza el uso de explosivos.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Slide 5 -->
-      <div class="carousel-item h-100">
-        <div class="overlay"></div>
-        <img src="slide5-0.jpeg" class="w-100 h-100 object-fit-cover" alt="Proyectos Exitosos">
-        <div class="carousel-caption d-flex h-100 align-items-center justify-content-center text-center px-3" data-aos="zoom-in" data-aos-delay="800">
-          <div class="slide-text">
-            <h1 class="display-4 fw-bold">Proyectos Exitosos</h1>
-            <p class="lead">Confianza y calidad en cada paso.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Anterior">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Siguiente">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-  </section>
+  <!-- Main Content Wrapper (Gets Blurred when Offcanvas Opens) -->
+  <div id="content">
 
-  <!-- About Us -->
-  <section id="about" class="py-5 bg-light">
-    <div class="container" data-aos="fade-up">
-      <div class="row align-items-center gy-4">
-        <div class="col-md-6" data-aos="fade-right">
-          <img src="about-image.jpg" alt="Sobre Nosotros" class="img-fluid rounded-3 shadow-lg">
-        </div>
-        <div class="col-md-6" data-aos="fade-left">
-          <h2>Sobre Nosotros</h2>
-          <p>Corporación Grupo Sur del Perú SAC ofrece servicios de perforación, voladura e instalación de polvorines con los más altos estándares de seguridad y calidad.</p>
-          <ul class="list-unstyled features">
-            <li><i class="bi bi-shield-lock-fill"></i> Seguridad certificada</li>
-            <li><i class="bi bi-lightbulb-fill"></i> Innovación tecnológica</li>
-            <li><i class="bi bi-award-fill"></i> Calidad garantizada</li>
-            <li><i class="bi bi-people-fill"></i> Responsabilidad social</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="py-5">
-    <div class="container" data-aos="fade-up">
-      <h2 class="text-center mb-5">Servicios</h2>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col" data-aos="flip-left" data-aos-delay="100">
-          <div class="card h-100 border-0 shadow service-card">
-            <div class="card-body text-center">
-              <i class="bi bi-gear-fill display-4 mb-3"></i>
-              <h5>Perforación Especializada</h5>
-              <p>Flota hidráulica de última generación para todo tipo de roca.</p>
+    <!-- Hero Carousel -->
+    <section id="home" class="vh-100 position-relative overflow-hidden">
+      <div id="heroCarousel" class="carousel slide carousel-fade h-100" data-bs-ride="carousel">
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active h-100 position-relative">
+            <img src="slide1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Bienvenida">
+            <div class="overlay"></div>
+            <div class="carousel-caption d-flex flex-column justify-content-center h-100 text-center">
+              <h1 data-key="hero_welcome" data-aos="fade-down">Bienvenidos a Grupo Sur del Perú</h1>
+              <p data-key="hero_tagline" data-aos="fade-up" class="mb-4">Soluciones integrales en perforación, voladura e instalación de polvorines.</p>
+              <a href="#about" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="100" data-key="hero_cta">Conócenos</a>
+            </div>
+          </div>
+          <div class="carousel-item h-100 position-relative">
+            <img src="slide2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Servicios">
+            <div class="overlay"></div>
+            <div class="carousel-caption d-flex flex-column justify-content-center h-100 text-center">
+              <h1 data-key="hero_services" data-aos="fade-down">Servicios Especializados</h1>
+              <p data-key="hero_services_desc" data-aos="fade-up" class="mb-4">Perforación, voladura, polvorines y comercialización de explosivos.</p>
+              <a href="#services" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="100" data-key="hero_services_cta">Ver Servicios</a>
+            </div>
+          </div>
+          <div class="carousel-item h-100 position-relative">
+            <img src="slide3.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Proyectos">
+            <div class="overlay"></div>
+            <div class="carousel-caption d-flex flex-column justify-content-center h-100 text-center">
+              <h1 data-key="hero_projects" data-aos="fade-down">Proyectos Exitosos</h1>
+              <p data-key="hero_projects_desc" data-aos="fade-up" class="mb-4">Experiencia comprobada en minería y construcción civil.</p>
+              <a href="#projects" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="100" data-key="hero_projects_cta">Nuestros Proyectos</a>
             </div>
           </div>
         </div>
-        <div class="col" data-aos="flip-left" data-aos-delay="200">
-          <div class="card h-100 border-0 shadow service-card">
-            <div class="card-body text-center">
-              <i class="bi bi-exclamation-triangle-fill display-4 mb-3"></i>
-              <h5>Voladuras Controladas</h5>
-              <p>Estrategias precisas para máxima eficiencia y seguridad.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col" data-aos="flip-left" data-aos-delay="300">
-          <div class="card h-100 border-0 shadow service-card">
-            <div class="card-body text-center">
-              <i class="bi bi-box-seam display-4 mb-3"></i>
-              <h5>Instalación de Polvorines</h5>
-              <p>Diseño y construcción cumpliendo normativa SUCAMEC.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Equipment -->
-  <section id="equipment" class="py-5 bg-light">
-    <div class="container" data-aos="fade-up">
-      <h2 class="text-center mb-5">Nuestro Equipo</h2>
-      <div id="equipCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner text-center">
-          <div class="carousel-item active" data-aos="zoom-in">
-            <img src="sandvik-dx700.jpg" class="d-block mx-auto rounded-3 shadow-lg" alt="Sandvik DX 700">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Sandvik DX 700</h5>
-            </div>
-          </div>
-          <div class="carousel-item" data-aos="zoom-in" data-aos-delay="200">
-            <img src="everdigm-ehd210.jpg" class="d-block mx-auto rounded-3 shadow-lg" alt="Everdigm EHD210">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Everdigm EHD210</h5>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#equipCarousel" data-bs-slide="prev" aria-label="Anterior">
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Anterior">
           <span class="carousel-control-prev-icon"></span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#equipCarousel" data-bs-slide="next" aria-label="Siguiente">
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Siguiente">
           <span class="carousel-control-next-icon"></span>
         </button>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects -->
-  <section id="projects" class="py-5">
-    <div class="container" data-aos="fade-up">
-      <h2 class="text-center mb-5">Proyectos Destacados</h2>
-      <ul class="timeline list-unstyled">
-        <li class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-          <span class="timeline-icon bg-primary"></span>
-          <div class="timeline-content">
-            <h5>Minera Tía María</h5>
-            <small>Desde Dic 2024</small>
-            <p>Voladuras precisas para apertura de plataformas en Arequipa.</p>
+    <!-- About Us -->
+    <section id="about" class="py-5">
+      <div class="container" data-aos="fade-up">
+        <div class="row align-items-center gy-4">
+          <div class="col-md-6" data-aos="fade-right">
+            <img src="about.jpeg" alt="Sobre Nosotros" class="img-fluid rounded-3 shadow-lg">
           </div>
-        </li>
-        <li class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-          <span class="timeline-icon bg-primary"></span>
-          <div class="timeline-content">
-            <h5>Carretera Ayo-Andamayo</h5>
-            <small>Ago 2022 — Actualidad</small>
-            <p>Control de voladuras para construcción de vías seguras.</p>
+          <div class="col-md-6" data-aos="fade-left">
+            <h2 data-key="about_title">Sobre Nosotros</h2>
+            <p data-key="about_desc">En Corporación Grupo Sur del Perú SAC, somos un equipo de profesionales apasionados por brindar soluciones innovadoras y seguras para la industria minera y la construcción civil, ofreciendo servicios de perforación y voladura, instalación de polvorines, comercialización de explosivos y asistencia técnica sobre voladura.</p>
+            <ul class="list-unstyled features">
+              <li><i class="bi bi-shield-lock-fill me-2"></i><span data-key="about_feature1">Compromiso con la seguridad</span></li>
+              <li><i class="bi bi-lightbulb-fill me-2"></i><span data-key="about_feature2">Innovación tecnológica</span></li>
+              <li><i class="bi bi-award-fill me-2"></i><span data-key="about_feature3">Calidad garantizada</span></li>
+              <li><i class="bi bi-people-fill me-2"></i><span data-key="about_feature4">Responsabilidad social</span></li>
+            </ul>
           </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-5 bg-light">
-    <div class="container" data-aos="fade-up">
-      <h2 class="text-center mb-5">Contáctanos</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <form>
-            <div class="mb-3">
-              <label class="form-label">Nombre</label>
-              <input type="text" class="form-control" placeholder="Tu nombre">
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Correo</label>
-              <input type="email" class="form-control" placeholder="Tu correo">
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Mensaje</label>
-              <textarea class="form-control" rows="5" placeholder="Escribe tu consulta"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg">Enviar Mensaje</button>
-          </form>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="py-4 bg-dark text-center text-white">
-    <div class="container">
-      <p class="mb-1">© 2025 Corporación Grupo Sur del Perú SAC</p>
-      <p class="mb-0">+51 987 374 470 | ventas@gruposurdelperu.com.pe</p>
-    </div>
-  </footer>
+    <!-- Mission & Vision -->
+    <section id="mission" class="py-5 bg-light">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-4" data-key="mission_title">Misión & Visión</h2>
+        <div class="row">
+          <div class="col-md-6" data-aos="fade-right">
+            <h5 data-key="mission_subtitle">Misión</h5>
+            <p data-key="mission_desc">“Nuestra misión es brindar soluciones integrales de alta calidad, seguridad y eficiencia en perforación y voladura, instalación de polvorines y uso de explosivos para la minería y construcción civil en el Perú, satisfaciendo las necesidades de nuestros clientes y contribuyendo al desarrollo sostenible del país.”</p>
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <h5 data-key="vision_subtitle">Visión</h5>
+            <p data-key="vision_desc">“Nuestra visión es establecernos como la empresa líder en soluciones integrales en perforación y voladura para obras civiles y minería en el Sur del Perú, reconocidos por nuestra excelencia en calidad, seguridad e innovación. Ser los líderes en instalación de polvorines en el Sur del Perú brindando asesoramiento para una mejor eficiencia en el uso de explosivos para nuestros clientes.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Bootstrap & AOS Scripts -->
+    <!-- Values -->
+    <section id="values" class="py-5">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-4" data-key="values_title">Nuestros Valores</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-shield-fill-check display-4 mb-3" style="color: #D63438;"></i>
+              <h5 data-key="value_security">Seguridad</h5>
+              <p data-key="value_security_desc">Priorizamos la protección de clientes, empleados y comunidades.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-shield-fill-check display-4 mb-3" style="color: #D63438;"></i>
+              <h5 data-key="value_innovation">Innovación</h5>
+              <p data-key="value_innovation_desc">Desarrollamos soluciones personalizadas y eficientes.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="zoom-in" data-aos-delay="300">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-shield-fill-check display-4 mb-3" style="color: #D63438;"></i>
+              <h5 data-key="value_quality">Calidad</h5>
+              <p data-key="value_quality_desc">Brindamos servicios confiables y personalizados.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="zoom-in" data-aos-delay="400">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-shield-fill-check display-4 mb-3" style="color: #D63438;"></i>
+              <h5 data-key="value_social">Responsabilidad Social</h5>
+              <p data-key="value_social_desc">Contribuimos al desarrollo sostenible del Perú.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- History Timeline -->
+    <section id="history" class="py-5 bg-light">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-5" data-key="history_title">Nuestra Historia</h2>
+        <ul class="timeline list-unstyled">
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <span class="timeline-icon" style="color: #D63438;"></span>
+            <div class="timeline-content">
+              <h5 data-key="history_2012">2012</h5>
+              <p data-key="history_2012_desc">Toolsbox Overall SAC inicia operaciones como proveedor integral de soluciones industriales, ofreciendo suministros especializados, renta de vehículos pesados y logística minera.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+            <span class="timeline-icon" style="color: #D63438;"> </span>
+            <div class="timeline-content">
+              <h5 data-key="history_2016">Junio 2016</h5>
+              <p data-key="history_2016_desc">Surge Corporación Grupo Sur del Perú SAC tras restructuración, expandiendo operaciones en comercialización de explosivos y servicios de construcción y minería.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+            <span class="timeline-icon" style="color: #D63438;" ></span>
+            <div class="timeline-content">
+              <h5 data-key="history_2017_2022">2017 – 2022</h5>
+              <p data-key="history_2017_2022_desc">Se realizan visitas técnicas a minas para optimizar uso de explosivos e instalación de polvorines, cumpliendo normativas SUCAMEC. Inician trabajos de perforación y voladura para proyectos de gran envergadura.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+            <span class="timeline-icon" style="color: #D63438;"></span>
+            <div class="timeline-content">
+              <h5 data-key="history_2024">2024</h5>
+              <p data-key="history_2024_desc">Objetivo: brindar servicios especializados de perforación y voladura para proyectos mineros de gran escala, satisfaciendo necesidades de las principales empresas mineras.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Presence -->
+    <section id="presence" class="py-5">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-4" data-key="presence_title">Nuestra Presencia</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+          <div class="col" data-aos="flip-up" data-aos-delay="100">
+            <i class="bi bi-geo-alt-fill fs-1 " style="color: #D63438;"></i>
+            <h5 data-key="presence_arequipa">Arequipa</h5>
+            <p data-key="presence_arequipa_desc">Instalación de polvorín en Minera Volcan.</p>
+          </div>
+          <div class="col" data-aos="flip-up" data-aos-delay="200">
+            <i class="bi bi-geo-alt-fill fs-1 " style="color: #D63438;"></i>
+            <h5 data-key="presence_apurimac">Apurímac</h5>
+            <p data-key="presence_apurimac_desc">Instalación de polvorín en Minera Pepas de Oro.</p>
+          </div>
+          <div class="col" data-aos="flip-up" data-aos-delay="300">
+            <i class="bi bi-geo-alt-fill fs-1 " style="color: #D63438;"></i>
+            <h5 data-key="presence_lima">Lima</h5>
+            <p data-key="presence_lima_desc">Instalación de polvorín en Santa Cruz de Andamarca (Minera Volcan).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-5 bg-light">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-5" data-key="services_title">Servicios</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col" data-aos="flip-left" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-gear-fill display-4 mb-3 " style="color: #D63438;"></i>
+              <h5 data-key="service_drilling">Perforación Especializada</h5>
+              <p data-key="service_drilling_desc">Flota hidráulica de última generación (Sandvik, Junjin, Soosan) para todo tipo de roca.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="flip-left" data-aos-delay="200">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-exclamation-triangle-fill display-4 mb-3" style="color: #D63438;"></i>
+              <h5 data-key="service_blasting">Voladuras Controladas</h5>
+              <p data-key="service_blasting_desc">Protocolos de voladura garantizando seguridad desde 1.000 m³ hasta 8.000 m³ por operación.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="flip-left" data-aos-delay="300">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-box-seam display-4 mb-3" style="color: #D63438;"></i>
+              <h5 data-key="service_polvorines">Instalación de Polvorines</h5>
+              <p data-key="service_polvorines_desc">Diseño y construcción cumple normativas SUCAMEC en Curimana, Los Reyes y más.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="flip-left" data-aos-delay="400">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-truck display-4 mb-3" style="color: #D63438;"></i>
+              <h5 data-key="service_transport">Transporte de Explosivos</h5>
+              <p data-key="service_transport_desc">Flota de camionetas y camiones certificados según SUCAMEC para traslado seguro.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="flip-left" data-aos-delay="500">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-box2-fill display-4 mb-3" style="color: #D63438;"></i>
+              <h5 data-key="service_sales">Comercialización de Explosivos</h5>
+              <p data-key="service_sales_desc">Distribución de explosivos FAMESA con capacitación y entrega oportuna.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipment Carousel -->
+    <section id="equipment" class="py-5">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-5" data-key="equipment_title">Nuestro Equipo</h2>
+        <div id="equipCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+          <!-- Indicators -->
+          <div class="carousel-indicators mb-4 justify-content-center">
+            <button type="button" data-bs-target="#equipCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#equipCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#equipCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#equipCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#equipCarousel" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#equipCarousel" data-bs-slide-to="5"></button>
+          </div>
+          <!-- Slides -->
+          <div class="carousel-inner text-center">
+            <div class="carousel-item active">
+              <img src="sandvik-dx-700.jpeg" class="d-block mx-auto rounded-3 shadow-lg equipment-img" alt="Sandvik DX 700">
+              <div class="equipment-caption mt-3">
+                <h5 data-key="equip_dx700">Sandvik DX 700</h5>
+                <p data-key="equip_dx700_desc">Potente y versátil, ideal para perforaciones profundas y duras.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="sandvik-dx-680.jpeg" class="d-block mx-auto rounded-3 shadow-lg equipment-img" alt="Sandvik DX 680">
+              <div class="equipment-caption mt-3">
+                <h5 data-key="equip_dx680">Sandvik DX 680</h5>
+                <p data-key="equip_dx680_desc">Robusta y confiable, con excelente relación potencia-peso.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="everdigm-ehd210.jpeg" class="d-block mx-auto rounded-3 shadow-lg equipment-img" alt="Everdigm EHD210">
+              <div class="equipment-caption mt-3">
+                <h5 data-key="equip_ehd210">Everdigm EHD210</h5>
+                <p data-key="equip_ehd210_desc">Alta precisión y eficiencia para rocas duras.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="atlas-copoco-d7.jpeg" class="d-block mx-auto rounded-3 shadow-lg equipment-img" alt="Atlas Copco D7">
+              <div class="equipment-caption mt-3">
+                <h5 data-key="equip_d7">Atlas Copco D7</h5>
+                <p data-key="equip_d7_desc">Duradurabilidad y capacidad para perforaciones complejas.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="junjin-jd-1400e.jpeg" class="d-block mx-auto rounded-3 shadow-lg equipment-img" alt="Junjin JD 1400E">
+              <div class="equipment-caption mt-3">
+                <h5 data-key="equip_jd1400e">Junjin JD 1400E</h5>
+                <p data-key="equip_jd1400e_desc">Oruga para movilidad en terrenos difíciles, con drifter y sistema de lavado de aire.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="soosan-jd-800e.jpeg" class="d-block mx-auto rounded-3 shadow-lg equipment-img" alt="Soosan JD 800E">
+              <div class="equipment-caption mt-3">
+                <h5 data-key="equip_jd800e">Soosan JD 800E</h5>
+                <p data-key="equip_jd800e_desc">Sistema hidráulico eficiente que maximiza fuerza y velocidad en perforación.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#equipCarousel" data-bs-slide="prev" aria-label="Anterior">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#equipCarousel" data-bs-slide="next" aria-label="Siguiente">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Polvorines Network -->
+    <section id="polvorines" class="py-5 bg-light">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-4" data-key="polvorines_title">Nuestra Red de Polvorines</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+          <div class="col" data-aos="flip-up" data-aos-delay="100">
+            <i class="bi bi-building-fill fs-1 " style="color: #D63438;"></i>
+            <h5 data-key="polvorines_arequipa">Polvorín Arequipa</h5>
+            <p data-key="polvorines_arequipa_desc">Almacenamiento seguro y confiable para industria minera y construcción.</p>
+          </div>
+          <div class="col" data-aos="flip-up" data-aos-delay="200">
+            <i class="bi bi-building-fill fs-1 " style="color: #D63438;"></i>
+            <h5 data-key="polvorines_tacna">Polvorín Tacna</h5>
+            <p data-key="polvorines_tacna_desc">Soluciones de almacenamiento para proyectos de infraestructura y minería.</p>
+          </div>
+          <div class="col" data-aos="flip-up" data-aos-delay="300">
+            <i class="bi bi-building-fill fs-1 " style="color: #D63438;"></i>
+            <h5 data-key="polvorines_apurimac">Polvorín Apurímac</h5>
+            <p data-key="polvorines_apurimac_desc">Atiende necesidades de almacenamiento de explosivos para minería y construcción.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications & Fleet -->
+    <section id="certifications" class="py-5">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-4" data-key="certifications_title">Certificaciones & Flota</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-patch-check-fill me-2" style="color: #D63438;"></i><span data-key="certifications_sucamec">Certificaciones SUCAMEC</span></h5>
+                <ul class="list-unstyled mb-0">
+                  <li data-key="certifications_transport">Certificación de transporte de explosivos según SUCAMEC.</li>
+                  <li data-key="certifications_vehicles">Vehículos acondicionados para transporte seguro.</li>
+                  <li data-key="certifications_drivers">Conductores capacitados y certificados.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-truck-front-fill me-2" style="color: #D63438;"></i><span data-key="fleet_title">Flota de Transporte</span></h5>
+                <p data-key="fleet_desc">Camionetas y camiones especializados para traslado de explosivos, cumpliendo normativas de seguridad.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-5 bg-light">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-5" data-key="projects_title">Proyectos Destacados</h2>
+        <ul class="timeline list-unstyled">
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <span class="timeline-icon" style="color: #D63438;"></span>
+            <div class="timeline-content">
+              <h5 data-key="proj_tia_maria">Minera Tía María</h5>
+              <small data-key="proj_tia_maria_date">Desde Dic 2024</small>
+              <p data-key="proj_tia_maria_desc">Perforación y voladura en vías de acceso y plataformas, diseñando mallas de perforación personalizadas para estabilidad y seguridad.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+            <span class="timeline-icon" style="color: #D63438;"></span>
+            <div class="timeline-content">
+              <h5 data-key="proj_carretera_ayo">Carretera Ayo-Andamayo</h5>
+              <small data-key="proj_carretera_ayo_date">Ago 2022 — Actualidad</small>
+              <p data-key="proj_carretera_ayo_desc">Control de voladuras para construcción de la vía Aplao-Ayo, instalando polvorín seguro cumpliendo SUCAMEC y asesorando en abastecimiento de explosivos.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+            <span class="timeline-icon" style="color: #D63438;"></span>
+            <div class="timeline-content">
+              <h5 data-key="proj_represa_coltani">Represa Coltani</h5>
+              <small data-key="proj_represa_coltani_date">Ago 2023 — Dic 2024</small>
+              <p data-key="proj_represa_coltani_desc">Perforación, voladura y apilación de roca para construcción de sistema de almacenamiento y regulación en el sector de la Quebrada Coltani, administrando polvorín según SUCAMEC.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+            <span class="timeline-icon" style="color: #D63438;"></span>
+            <div class="timeline-content">
+              <h5 data-key="proj_polvorin_curimana">Polvorín Curimana (Ucayali)</h5>
+              <small data-key="proj_polvorin_curimana_date">Ene 2023 — Mayo 2023</small>
+              <p data-key="proj_polvorin_curimana_desc">Diseño y construcción de polvorín cumpliendo normativas, entrega de documentación técnica completa (análisis de riesgos y cronograma de simulacros).</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="500">
+            <span class="timeline-icon" style="color: #D63438;"></span>
+            <div class="timeline-content">
+              <h5 data-key="proj_polvorin_santacruz">Polvorín Santa Cruz de Andamarca</h5>
+              <small data-key="proj_polvorin_santacruz_date">Set 2023 — Mar 2024</small>
+              <p data-key="proj_polvorin_santacruz_desc">Construcción de polvorín para Minera Volcan en Huaral, con planos y especificaciones técnicas detalladas, cumpliendo estándares SUCAMEC.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="py-5">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-4" data-key="team_title">Equipo Humano</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col" data-aos="flip-left" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-person-badge display-4 mb-3" style="color: #D63438;"></i>
+              <h5 data-key="team_engineer">Ingeniero de Minas</h5>
+              <p data-key="team_engineer_desc">Profesional con experiencia en diseño de mallas de perforación y supervisión de voladuras.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="flip-left" data-aos-delay="200">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-person-badge display-4 mb-3" style="color: #D63438;"></i>
+              <h5 data-key="team_safety">Especialista en Seguridad Industrial</h5>
+              <p data-key="team_safety_desc">Garantiza cumplimiento de normativas SUCAMEC y protocolos de voladura.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="flip-left" data-aos-delay="300">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-person-badge display-4 mb-3" style="color: #D63438;"></i>
+              <h5 data-key="team_operator">Operador de Perforadoras Hidráulicas</h5>
+              <p data-key="team_operator_desc">Especializado en manejo de equipos Sandvik, Junjin, Soosan y Atlas Copco.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-5" data-key="contact_title">Contáctanos</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <form>
+              <div class="mb-3" data-aos="fade-right">
+                <label for="name" class="form-label" data-key="contact_name">Nombre</label>
+                <input type="text" id="name" class="form-control" placeholder="" required>
+              </div>
+              <div class="mb-3" data-aos="fade-left">
+                <label for="email" class="form-label" data-key="contact_email">Correo Electrónico</label>
+                <input type="email" id="email" class="form-control" placeholder="" required>
+              </div>
+              <div class="mb-3" data-aos="fade-up">
+                <label for="message" class="form-label" data-key="contact_message">Mensaje</label>
+                <textarea id="message" class="form-control" rows="5" placeholder="" required></textarea>
+              </div>
+              <div class="text-center" data-aos="zoom-in">
+                <button type="submit" class="btn btn-primary btn-lg" data-key="contact_submit">Enviar Mensaje</button>
+              </div>
+            </form>
+            <div class="mt-4 text-center">
+              <p><i class="bi bi-whatsapp me-2"></i><a href="https://wa.me/51987374470" target="_blank" data-key="contact_whatsapp">+51 987 374 470</a></p>
+              <p><i class="bi bi-envelope-fill me-2"></i><a href="mailto:ventas@gruposurdelperu.com.pe" data-key="contact_email_link">ventas@gruposurdelperu.com.pe</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4">
+      <div class="container text-center">
+        <p class="mb-3" data-key="footer_copy">© 2025 Grupo Sur del Perú SAC. Todos los derechos reservados.</p>
+        <div>
+          <a href="https://wa.me/51987374470" target="_blank" class="me-3"><i class="bi bi-whatsapp fs-2"></i></a>
+          <a href="mailto:ventas@gruposurdelperu.com.pe"><i class="bi bi-envelope-fill fs-2"></i></a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <!-- End #content -->
+
+  <!-- Scripts -->
+  <!-- Bootstrap Bundle con Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true, duration: 800 });
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1) Inicializar AOS con duración más corta
+    AOS.init({ once: true, duration: 400 });
 
-    // Blur background when offcanvas opens
-    const offcanvasEl = document.getElementById('offcanvasMenu');
-    offcanvasEl.addEventListener('show.bs.offcanvas', () => document.body.classList.add('blur-bg'));
-    offcanvasEl.addEventListener('hidden.bs.offcanvas', () => document.body.classList.remove('blur-bg'));
-
-    // Navbar scroll background
-    window.addEventListener('scroll', () => {
-      document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
+    // 2) Guardar todos los textos en español (arranque) para restaurar luego
+    const spanishTexts = {};
+    document.querySelectorAll('[data-key]').forEach(el => {
+      const key = el.getAttribute('data-key');
+      spanishTexts[key] = el.innerText.trim();
     });
 
-    // Dark/Light mode toggle
+    // 3) Traducciones al inglés
+    const translations = {
+      title: 'Grupo Sur del Perú SAC',
+      hero_welcome: 'Welcome to Grupo Sur del Perú',
+      hero_tagline: 'Comprehensive solutions in drilling, blasting, and magazine installation.',
+      hero_cta: 'Learn More',
+      hero_services: 'Specialized Services',
+      hero_services_desc: 'Drilling, blasting, magazines, and explosives distribution.',
+      hero_services_cta: 'View Services',
+      hero_projects: 'Successful Projects',
+      hero_projects_desc: 'Proven experience in mining and civil construction.',
+      hero_projects_cta: 'Our Projects',
+      about_title: 'About Us',
+      about_desc: 'At Corporación Grupo Sur del Perú SAC, we are a team of professionals passionate about providing innovative and safe solutions for the mining industry and civil construction, offering drilling and blasting services, magazine installation, explosives commercialization, and blasting technical support.',
+      about_feature1: 'Commitment to Safety',
+      about_feature2: 'Technological Innovation',
+      about_feature3: 'Guaranteed Quality',
+      about_feature4: 'Social Responsibility',
+      mission_title: 'Mission & Vision',
+      mission_subtitle: 'Mission',
+      mission_desc: '“Our mission is to provide comprehensive, high-quality, safe, and efficient solutions in drilling and blasting, magazine installation, and use of explosives for mining and civil construction in Peru, fulfilling our clients’ needs and contributing to the country’s sustainable development.”',
+      vision_subtitle: 'Vision',
+      vision_desc: '“Our vision is to establish ourselves as the leading company in comprehensive solutions for drilling and blasting for civil works and mining in Southern Peru, recognized for our excellence in quality, safety, and innovation. To be the leaders in magazine installation in Southern Peru providing advisory for better explosives efficiency to our clients.”',
+      values_title: 'Our Values',
+      value_security: 'Safety',
+      value_security_desc: 'We prioritize the protection of clients, employees, and communities.',
+      value_innovation: 'Innovation',
+      value_innovation_desc: 'We develop personalized and efficient solutions.',
+      value_quality: 'Quality',
+      value_quality_desc: 'We deliver reliable and customized services.',
+      value_social: 'Social Responsibility',
+      value_social_desc: 'We contribute to Peru’s sustainable development.',
+      history_title: 'Our History',
+      history_2012: '2012',
+      history_2012_desc: 'Toolsbox Overall SAC began operations as an integrated industrial solutions provider, offering specialized supplies, heavy equipment rental, and mining logistics.',
+      history_2016: 'June 2016',
+      history_2016_desc: 'Corporación Grupo Sur del Perú SAC emerges after restructuring, expanding operations in explosives commercialization and construction and mining services.',
+      history_2017_2022: '2017 – 2022',
+      history_2017_2022_desc: 'Technical visits to mines are conducted to optimize explosives use and magazine installation, complying with SUCAMEC regulations. Drilling and blasting work for large-scale projects begins.',
+      history_2024: '2024',
+      history_2024_desc: 'Objective: to provide specialized drilling and blasting services for large-scale mining projects, meeting the needs of major mining companies.',
+      presence_title: 'Our Presence',
+      presence_arequipa: 'Arequipa',
+      presence_arequipa_desc: 'Magazine installation at Minera Volcan.',
+      presence_apurimac: 'Apurímac',
+      presence_apurimac_desc: 'Magazine installation at Minera Pepas de Oro.',
+      presence_lima: 'Lima',
+      presence_lima_desc: 'Magazine installation at Santa Cruz de Andamarca (Minera Volcan).',
+      services_title: 'Services',
+      service_drilling: 'Specialized Drilling',
+      service_drilling_desc: 'Hydraulic fleet of latest generation (Sandvik, Junjin, Soosan) for all rock types.',
+      service_blasting: 'Controlled Blasting',
+      service_blasting_desc: 'Blasting protocols ensuring safety from 1,000 m³ to 8,000 m³ per operation.',
+      service_polvorines: 'Magazine Installation',
+      service_polvorines_desc: 'Design and construction complying with SUCAMEC regulations in Curimana, Los Reyes, and more.',
+      service_transport: 'Explosives Transport',
+      service_transport_desc: 'Fleet of certified trucks and pickups for safe transport.',
+      service_sales: 'Explosives Commercialization',
+      service_sales_desc: 'Distribution of FAMESA explosives with training and timely delivery.',
+      equipment_title: 'Our Equipment',
+      equip_dx700: 'Sandvik DX 700',
+      equip_dx700_desc: 'Powerful and versatile, ideal for deep and hard drilling.',
+      equip_dx680: 'Sandvik DX 680',
+      equip_dx680_desc: 'Robust and reliable, with excellent power-to-weight ratio.',
+      equip_ehd210: 'Everdigm EHD210',
+      equip_ehd210_desc: 'High precision and efficiency for hard rock.',
+      equip_d7: 'Atlas Copco D7',
+      equip_d7_desc: 'Durable and capable of handling complex drillings.',
+      equip_jd1400e: 'Junjin JD 1400E',
+      equip_jd1400e_desc: 'Crawler for mobility on difficult terrain, with drifter and air wash system.',
+      equip_jd800e: 'Soosan JD 800E',
+      equip_jd800e_desc: 'Efficient hydraulic system that maximizes drilling force and speed.',
+      polvorines_title: 'Our Magazine Network',
+      polvorines_arequipa: 'Arequipa Magazine',
+      polvorines_arequipa_desc: 'Secure and reliable storage for mining and construction.',
+      polvorines_tacna: 'Tacna Magazine',
+      polvorines_tacna_desc: 'Storage solutions for infrastructure and mining projects.',
+      polvorines_apurimac: 'Apurímac Magazine',
+      polvorines_apurimac_desc: 'Serves explosives storage needs for mining and construction.',
+      certifications_title: 'Certifications & Fleet',
+      certifications_sucamec: 'SUCAMEC Certifications',
+      certifications_transport: 'Explosives transport certification according to SUCAMEC.',
+      certifications_vehicles: 'Vehicles adapted for safe transport.',
+      certifications_drivers: 'Trained and certified drivers.',
+      fleet_title: 'Transport Fleet',
+      fleet_desc: 'Specialized trucks and pickups for explosives transport, meeting safety regulations.',
+      projects_title: 'Featured Projects',
+      proj_tia_maria: 'Tía María Mine',
+      proj_tia_maria_date: 'Since Dec 2024',
+      proj_tia_maria_desc: 'Drilling and blasting on access roads and platforms, designing custom drill patterns for stability and safety.',
+      proj_carretera_ayo: 'Ayo-Andamayo Road',
+      proj_carretera_ayo_date: 'Aug 2022 — Present',
+      proj_carretera_ayo_desc: 'Blasting control for Aplao-Ayo road construction, installing safe magazine complying with SUCAMEC and advising on explosives supply.',
+      proj_represa_coltani: 'Coltani Dam',
+      proj_represa_coltani_date: 'Aug 2023 — Dec 2024',
+      proj_represa_coltani_desc: 'Drilling, blasting, and rock stacking for storage and regulation system construction in Quebrada Coltani area, managing magazine per SUCAMEC.',
+      proj_polvorin_curimana: 'Curimana Magazine (Ucayali)',
+      proj_polvorin_curimana_date: 'Jan 2023 — May 2023',
+      proj_polvorin_curimana_desc: 'Design and construction of magazine complying with regulations, delivering complete technical documentation (risk analysis and drill schedules).',
+      proj_polvorin_santacruz: 'Santa Cruz de Andamarca Magazine',
+      proj_polvorin_santacruz_date: 'Sep 2023 — Mar 2024',
+      proj_polvorin_santacruz_desc: 'Magazine construction for Minera Volcan in Huaral, with detailed plans and technical specs meeting SUCAMEC standards.',
+      team_title: 'Human Team',
+      team_engineer: 'Mining Engineer',
+      team_engineer_desc: 'Professional experienced in drill pattern design and blasting supervision.',
+      team_safety: 'Industrial Safety Specialist',
+      team_safety_desc: 'Ensures compliance with SUCAMEC regulations and blasting protocols.',
+      team_operator: 'Hydraulic Drill Operator',
+      team_operator_desc: 'Specialized in operating Sandvik, Junjin, Soosan, and Atlas Copco equipment.',
+      contact_title: 'Contact Us',
+      contact_name: 'Name',
+      contact_email: 'Email',
+      contact_message: 'Message',
+      contact_submit: 'Send Message',
+      contact_whatsapp: '+51 987 374 470',
+      contact_email_link: 'ventas@gruposurdelperu.com.pe',
+      footer_copy: '© 2025 Grupo Sur del Perú SAC. All rights reserved.',
+      menu: 'Menu',
+      menu_about: 'About Us',
+      menu_mission: 'Mission & Vision',
+      menu_values: 'Values',
+      menu_history: 'History',
+      menu_presence: 'Presence',
+      menu_services: 'Services',
+      menu_equipment: 'Equipment',
+      menu_polvorines: 'Magazines',
+      menu_certifications: 'Certifications',
+      menu_projects: 'Projects',
+      menu_team: 'Team',
+      menu_contact: 'Contact'
+    };
+
+    let currentLang = 'es'; // arranque en español
+
+    // 4) Función para alternar texto en página
+    function setLanguage(lang) {
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (lang === 'en' && translations[key]) {
+          el.innerText = translations[key];
+        } else if (lang === 'es' && spanishTexts[key]) {
+          el.innerText = spanishTexts[key];
+        }
+      });
+      // Cambia atributo <html lang="...">
+      document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'es');
+    }
+
+    // 5) Listener para el botón de idioma
+    const langToggle = document.getElementById('langToggle');
+    langToggle.addEventListener('click', () => {
+      currentLang = currentLang === 'es' ? 'en' : 'es';
+      setLanguage(currentLang);
+    });
+
+    // 6) Intercambio de temas y cambio de íconos
+    const root = document.documentElement;
     const themeToggle = document.getElementById('themeToggle');
+    const iconTheme = document.getElementById('iconTheme');
+    const iconLang   = document.getElementById('iconLang');
+    const iconMenu   = document.getElementById('iconMenu');
+    const navbar     = document.getElementById('mainNav');
+    const inputs     = document.querySelectorAll('#contact .form-control');
+
+    function updateThemeUI() {
+      if (root.getAttribute('data-theme') === 'light') {
+        // Cambiar a Modo Claro
+        iconTheme.className = 'bi bi-moon-fill fs-4';
+        iconLang.style.color   = '#D63438';
+        iconTheme.style.color = '#D63438';
+        iconMenu.style.color  = '#D63438';
+        navbar.style.background      = 'rgba(254,254,254,0.8)';
+        navbar.style.backdropFilter  = 'blur(10px)';
+        // Inputs fondo claro
+        inputs.forEach(i => {
+          i.style.backgroundColor = '#FFFFFF';
+          i.style.color = '#282829';
+        });
+      } else {
+        // Cambiar a Modo Oscuro
+        iconTheme.className = 'bi bi-sun-fill fs-4';
+        iconLang.style.color   = '#D63438';
+        iconTheme.style.color = '#D63438';
+        iconMenu.style.color  = '#D63438';
+        navbar.style.background      = 'rgba(40,40,41,0.8)';
+        navbar.style.backdropFilter  = 'blur(10px)';
+        // Inputs fondo gris oscuro
+        inputs.forEach(i => {
+          i.style.backgroundColor = '#404040';
+          i.style.color = '#FEFEFE';
+        });
+      }
+    }
+
+    // Inicializar estado de tema
+    updateThemeUI();
+
     themeToggle.addEventListener('click', () => {
-      const root = document.documentElement;
-      const icon = themeToggle.querySelector('i');
       if (root.getAttribute('data-theme') === 'dark') {
         root.setAttribute('data-theme', 'light');
-        icon.className = 'bi bi-sun-fill fs-4 text-dark';
       } else {
         root.setAttribute('data-theme', 'dark');
-        icon.className = 'bi bi-moon-fill fs-4 text-light';
       }
+      updateThemeUI();
     });
-  </script>
+
+    // 7) Blur content al abrir/cerrar offcanvas
+    const offcanvasEl = document.getElementById('offcanvasMenu');
+    offcanvasEl.addEventListener('show.bs.offcanvas', () => document.getElementById('content').classList.add('blur-bg'));
+    offcanvasEl.addEventListener('hidden.bs.offcanvas', () => document.getElementById('content').classList.remove('blur-bg'));
+  });
+</script>
 
 </body>
 </html>
