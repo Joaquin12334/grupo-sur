@@ -641,17 +641,17 @@
       // —— Zonas y geocoding —— 
       const geocoder = new google.maps.Geocoder();
       const zonas = [
-        { address: "J7G8+3V, 06421, Perú", name: "Cascabamba", city: "Cajamarca", description: "Instalación de polvorín en Minera Cascabamba" },
-        { address: "8PHP+65F, Cerro De Pasco 19001, Perú", name: "Minera Volcan", city: "Lima", description: "Instalación de polvorín en Minera Volcan" },
-        { address: "Famesa, Puente Piedra 15117, Perú", name: "Famesa", city: "Lima", description: "Comercialización de explosivos de FAMESA" },
-        { address: "Plaza de armas, COTARUSE 03580, Perú", name: "Minera Pepas de Oro", city: "Apurímac", description: "Instalación de polvorín en Minera Pepas de Oro" },
-        { address: "Curimana 25601, Perú", name: "Curimana", city: "Ucayali", description: "Instalación de polvorín en Curimana para SAExploration" },
-        { address: "La Rinconada 21355, Perú", name: "La Rinconada", city: "Puno", description: "Instalación de polvorín en La Rinconada" },
-        { address: "C. Mayta Capac 107, Arequipa 04001, Perú", name: "Minera Los Reyes", city: "Arequipa", description: "Instalación de polvorín en Minera Los Reyes" },
-        { address: "Ayo 04645, Perú", name: "Ayo", city: "Arequipa", description: "Perforación y voladura para la construcción carretera Ayo-Andamayo (Frente de Ayo)" },
-        { address: "X79C+C3P, Cocachacra 04430, Perú", name: "Tía María", city: "Arequipa", description: "Perforación y voladura en vías de acceso y plataformas en Unidad minera Tía María" },
-        { address: "RHCV+J2R, 23850, Perú", name: "Represa Coltani", city: "Tacna", description: "Perforación, voladura y apilamiento de roca para Represa Coltani" },
-        { address: "Andamayo 04605, Perú", name: "Andamayo", city: "Arequipa", description: "Perforación y voladura para la construcción carretera Ayo-Andamayo (Frente de Andamayo)" }
+        { address: "J7G8+3V, 06421, Perú", name: "Cascabamba", city: "Cajamarca", description: "Instalación de polvorín en Minera Cascabamba", imageUrl:"cascabamba.jpeg" },
+        { address: "8PHP+65F, Cerro De Pasco 19001, Perú", name: "Minera Volcan", city: "Lima", description: "Instalación de polvorín en Minera Volcan", imageUrl:"volcan.jpeg" },
+        { address: "Famesa, Puente Piedra 15117, Perú", name: "Famesa", city: "Lima", description: "Comercialización de explosivos de FAMESA", imageUrl:"famesa.jpeg" },
+        { address: "Plaza de armas, COTARUSE 03580, Perú", name: "Minera Pepas de Oro", city: "Apurímac", description: "Instalación de polvorín en Minera Pepas de Oro", imageUrl:"pepas-de-oro.jpeg" },
+        { address: "Curimana 25601, Perú", name: "Curimana", city: "Ucayali", description: "Instalación de polvorín en Curimana para SAExploration", imageUrl:"curimana.jpeg" },
+        { address: "La Rinconada 21355, Perú", name: "La Rinconada", city: "Puno", description: "Instalación de polvorín en La Rinconada", imageUrl:"la-rinconada.jpeg" },
+        { address: "C. Mayta Capac 107, Arequipa 04001, Perú", name: "Minera Los Reyes", city: "Arequipa", description: "Instalación de polvorín en Minera Los Reyes", imageUrl:"los-reyes.jpeg" },
+        { address: "Ayo 04645, Perú", name: "Ayo", city: "Arequipa", description: "Perforación y voladura para la construcción carretera Ayo-Andamayo (Frente de Ayo)", imageUrl:"ayo.jpeg" },
+        { address: "X79C+C3P, Cocachacra 04430, Perú", name: "Tía María", city: "Arequipa", description: "Perforación y voladura en vías de acceso y plataformas en Unidad minera Tía María", imageUrl:"cocachacra.jpeg" },
+        { address: "RHCV+J2R, 23850, Perú", name: "Represa Coltani", city: "Tacna", description: "Perforación, voladura y apilamiento de roca para Represa Coltani", imageUrl:"coltani.jpeg" },
+        { address: "Andamayo 04605, Perú", name: "Andamayo", city: "Arequipa", description: "Perforación y voladura para la construcción carretera Ayo-Andamayo (Frente de Andamayo)", imageUrl:"andamayo.jpeg" }
       ];
 
       zonas.forEach(z => {
@@ -671,13 +671,20 @@
                 strokeColor: '#fff'
               }
             });
+            const infoContent = `
+              <div class="map-info-window">
+                <img src="${z.imageUrl}" 
+                    alt="${z.name}" 
+                    style="width:100%; max-width:200px; border-radius:4px; margin-bottom:0.5rem;">
+                <strong>${z.name} — ${z.city}</strong>
+                <p>${z.description}</p>
+              </div>
+            `;
+
             const info = new google.maps.InfoWindow({
-              content: `
-                <div class="map-info-window">
-                  <strong>${z.name} — ${z.city}</strong>
-                  <p>${z.description}</p>
-                </div>`
+              content: infoContent
             });
+
             marker.addListener('click', () => info.open(map, marker));
           } else {
             console.error("Geocode falló para", z.address, status);
