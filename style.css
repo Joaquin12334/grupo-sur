@@ -34,7 +34,7 @@
   background-color: #bcbcbc !important;
 }
 
-/* === GLOBAL STYLES === */
+/* === ESTILOS GOBALES === */
 html {
   scroll-behavior: smooth;
 }
@@ -78,7 +78,6 @@ a:hover {
   color: var(--clr-primary);
 }
 
-/* Utility Helpers */
 .text-center {
   text-align: center;
 }
@@ -146,7 +145,7 @@ a:hover {
   width: 100%;
 }
 
-/* Toggle Buttons */
+/* MODOS DE PAGINA */
 #themeToggle i,
 #langToggle i,
 .btn-menu i {
@@ -175,13 +174,12 @@ a:hover {
   color: var(--clr-primary) !important;
 }
 
-/* Ensure offcanvas does not blur itself */
 .offcanvas.show ~ #content,
 #content.blur-bg {
   filter: blur(var(--blur-amount));
 }
 
-/* === HERO CAROUSEL === */
+/* === HERO CARRUSEL === */
 header {
   position: relative;
   overflow: hidden;
@@ -226,7 +224,6 @@ header {
   z-index: 2;
 }
 
-/* Responsive Hero Text */
 @media (max-width: 992px) {
   .carousel-caption h1 {
     font-size: 2.5rem;
@@ -238,7 +235,7 @@ header {
 
 
 
-/* === ABOUT === */
+/* === SOBRE NOSOTROS === */
 #about .features {
   list-style: none;
   padding: 0;
@@ -250,7 +247,7 @@ header {
   margin-bottom: 0.5rem;
 }
 
-/* === MISSION & VISION === */
+/* === MISION & VISION === */
 
 [data-theme="dark"] #mission {
   background-color: #666666;
@@ -264,7 +261,7 @@ header {
   line-height: 1.6;
 }
 
-/* === VALUES === */
+/* === VALORES === */
 #values .card {
   border: none;
   border-radius: 0.5rem;
@@ -291,7 +288,7 @@ header {
   margin-bottom: 0.5rem;
 }
 
-/* === HISTORY TIMELINE === */
+/* === HISTORIA LINEA DE TIEMPO === */
 #history .timeline {
   position: relative;
   padding: 2rem 0;
@@ -395,7 +392,7 @@ header {
   }
 }
 
-/* === PRESENCE === */
+/* === NUESTRA PRESENCIA === */
 #presence .bi-geo-alt-fill {
   font-size: 2.5rem;
   color: var(--clr-primary);
@@ -438,11 +435,11 @@ header {
 }
 #map {
   width: 100%;
-  height: 500px;       /* ajusta altura si quieres más o menos */
+  height: 500px;       
   border-radius: 0.5rem;
   margin-bottom: 1.5rem;
 }
-/* Estilos para el contenido de los InfoWindows */
+
 .map-info-window {
   background: var(--section-bg-alt);
   color: var(--fg);
@@ -464,7 +461,7 @@ header {
   margin-bottom: 0.5rem;
 }
 
-/* === SERVICES === */
+/* === SERVICIOS === */
 #services .card {
   border: none;
   border-radius: 0.5rem;
@@ -495,7 +492,7 @@ header {
   line-height: 1.5;
 }
 
-/* === EQUIPMENT CAROUSEL === */
+/* === EQUIPAMIENTO CARRUSEL === */
 #equipment .carousel-item {
   position: relative;
 }
@@ -522,7 +519,6 @@ header {
   line-height: 1.5;
 }
 
-/* Indicators Custom */
 #equipment .carousel-indicators button {
   width: 12px;
   height: 12px;
@@ -537,12 +533,11 @@ header {
   background-color: var(--clr-primary);
 }
 
-/* Hide Default Indicator Borders */
+
 #equipment .carousel-indicators [data-bs-target] {
   border: none;
 }
 
-/* Responsive Equipment */
 @media (max-width: 992px) {
   #equipment .equipment-img {
     max-width: 100%;
@@ -560,7 +555,7 @@ header {
   line-height: 1.5;
 }
 
-/* === CERTIFICATIONS & FLEET === */
+/* === CERTIFICACIONES & FLOTA === */
 #certifications .card {
   border: none;
   border-radius: 0.5rem;
@@ -591,7 +586,7 @@ header {
   margin-right: 0.5rem;
 }
 
-/* === PROJECTS TIMELINE === */
+/* === PROJECTOS LINEA DE TIEMPO === */
 #projects .timeline {
   position: relative;
   padding: 2rem 0;
@@ -693,7 +688,7 @@ header {
   }
 }
 
-/* === TEAM === */
+/* === EQUIPO === */
 #team .card {
   border: none;
   border-radius: 0.5rem;
@@ -718,7 +713,7 @@ header {
   margin-bottom: 1rem;
 }
 
-/* === CONTACT === */
+/* === CONTACTO === */
 #contact label {
   font-weight: 600;
 }
@@ -743,7 +738,6 @@ header {
   filter: brightness(0.9);
 }
 
-/* Contact Icons */
 #contact .bi-whatsapp,
 #contact .bi-envelope-fill {
   font-size: 1.5rem;
@@ -822,3 +816,4 @@ footer .bi-envelope-fill {
     font-size: 0.9rem;
   }
 }
+
