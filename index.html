@@ -7,20 +7,15 @@
   <meta name="theme-color" content="#282829">
   <link rel="icon" type="image/png" href="iconow.png">
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- AOS Animations -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Offcanvas Menu (No Blur on Menu) -->
+  <!-- Offcanvas Menu -->
   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
     <div class="offcanvas-header border-0">
       <h5 class="offcanvas-title" id="offcanvasMenuLabel" data-key="menu">Menú</h5>
@@ -70,23 +65,19 @@
     </div>
   </div>
 
-  <!-- Navbar (Semi-Transparent, Blur Background) -->
+  <!-- Navbar -->
 <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
   <div class="container d-flex align-items-center justify-content-between">
     <a class="navbar-brand d-flex align-items-center" href="#home">
       <img src="logo1.png" alt="Logo Grupo Sur" height="50" class="me-2">
-      <!-- (no cambia el texto aquí) -->
     </a>
     <div class="d-flex align-items-center">
-      <!-- Language Toggle -->
       <button id="langToggle" class="btn btn-link btn-sm p-1 me-3" aria-label="Cambiar idioma">
         <i class="bi bi-translate fs-4" id="iconLang" style="color: #D63438;"></i>
       </button>
-      <!-- Dark/Light Toggle -->
       <button id="themeToggle" class="btn btn-link btn-sm p-1 me-3" aria-label="Cambiar tema">
         <i class="bi bi-moon-fill fs-4" id="iconTheme" style="color: #D63438;"></i>
       </button>
-      <!-- Offcanvas Toggle -->
       <button class="btn btn-link btn-sm p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Abrir menú">
         <i class="bi bi-list fs-4" id="iconMenu" style="color: #D63438;"></i>
       </button>
@@ -94,10 +85,9 @@
   </div>
 </nav>
 
-  <!-- Main Content Wrapper (Gets Blurred when Offcanvas Opens) -->
   <div id="content">
 
-    <!-- Hero Carousel -->
+    <!-- Hero Carrusel -->
     <section id="home" class="vh-100 position-relative overflow-hidden">
       <div id="heroCarousel" class="carousel slide carousel-fade h-100" data-bs-ride="carousel">
         <div class="carousel-inner h-100">
@@ -138,7 +128,7 @@
       </div>
     </section>
 
-    <!-- About Us -->
+    <!-- Sobre nosotros -->
     <section id="about" class="py-5">
       <div class="container" data-aos="fade-up">
         <div class="row align-items-center gy-4">
@@ -159,7 +149,7 @@
       </div>
     </section>
 
-    <!-- Mission & Vision -->
+    <!-- Mision & Vision -->
     <section id="mission" class="py-5 bg-light">
       <div class="container" data-aos="fade-up">
         <h2 class="text-center mb-4" data-key="mission_title">Misión & Visión</h2>
@@ -176,12 +166,10 @@
       </div>
     </section>
 
-    <!-- Values -->
+    <!-- Valores -->
     <section id="values" class="py-5">
       <div class="container" data-aos="fade-up">
         <h2 class="text-center mb-4" data-key="values_title">Nuestros Valores</h2>
-
-        <!-- === Animación profesional: trazo que se dibuja una sola vez === -->
         <div class="d-flex justify-content-center mb-4">
           <svg width="180" height="30" viewBox="0 0 180 30" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -229,7 +217,7 @@
       </div>
     </section>
 
-    <!-- History Timeline -->
+    <!-- Historia Linea de tiempo -->
     <section id="history" class="py-5 bg-light">
       <div class="container" data-aos="fade-up">
         <h2 class="text-center mb-5" data-key="history_title">Nuestra Historia</h2>
@@ -266,20 +254,19 @@
       </div>
     </section>
 
-    <!-- ——— NUESTRA PRESENCIA ——— -->
+    <!-- Nuestra presencia -->
     <section id="presence" class="py-5">
       <div class="container" data-aos="fade-up">
         <h2 class="text-center mb-4" data-key="presence_title">Nuestra Presencia</h2>
         <div id="presence-map" class="row gx-0">
           <div class="col-12">
-            <!-- Contenedor donde se renderizará el mapa -->
             <div id="map"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Services -->
+    <!-- Servicios -->
     <section id="services" class="py-5 bg-light">
       <div class="container" data-aos="fade-up">
         <h2 class="text-center mb-5" data-key="services_title">Servicios</h2>
@@ -323,12 +310,11 @@
       </div>
     </section>
 
-    <!-- Equipment Carousel -->
+    <!-- Equipamiento Carrusel -->
     <section id="equipment" class="py-5">
       <div class="container" data-aos="fade-up">
         <h2 class="text-center mb-5" data-key="equipment_title">Nuestro Equipo</h2>
         <div id="equipCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
-          <!-- Indicators -->
           <div class="carousel-indicators mb-4 justify-content-center">
             <button type="button" data-bs-target="#equipCarousel" data-bs-slide-to="0" class="active"></button>
             <button type="button" data-bs-target="#equipCarousel" data-bs-slide-to="1"></button>
@@ -337,7 +323,6 @@
             <button type="button" data-bs-target="#equipCarousel" data-bs-slide-to="4"></button>
             <button type="button" data-bs-target="#equipCarousel" data-bs-slide-to="5"></button>
           </div>
-          <!-- Slides -->
           <div class="carousel-inner text-center">
             <div class="carousel-item active">
               <img src="sandvik-dx-700.jpeg" class="d-block mx-auto rounded-3 shadow-lg equipment-img" alt="Sandvik DX 700">
@@ -382,7 +367,6 @@
               </div>
             </div>
           </div>
-          <!-- Controls -->
           <button class="carousel-control-prev" type="button" data-bs-target="#equipCarousel" data-bs-slide="prev" aria-label="Anterior">
             <i id="equipPrev" class="bi bi-chevron-left fs-2" style="color: #D63438;"></i>
           </button>
@@ -393,7 +377,7 @@
       </div>
     </section>
 
-    <!-- Polvorines Network -->
+    <!-- Polvorines Red -->
     <section id="polvorines" class="py-5 bg-light">
       <div class="container" data-aos="fade-up">
         <h2 class="text-center mb-4" data-key="polvorines_title">Nuestra Red de Polvorines</h2>
@@ -417,7 +401,7 @@
       </div>
     </section>
 
-    <!-- Certifications & Fleet -->
+    <!-- Certificaciones & Flota -->
     <section id="certifications" class="py-5">
       <div class="container" data-aos="fade-up">
         <h2 class="text-center mb-4" data-key="certifications_title">Certificaciones & Flota</h2>
@@ -446,7 +430,7 @@
       </div>
     </section>
 
-    <!-- Projects -->
+    <!-- Projectos -->
     <section id="projects" class="py-5 bg-light">
       <div class="container" data-aos="fade-up">
         <h2 class="text-center mb-5" data-key="projects_title">Proyectos Destacados</h2>
@@ -495,7 +479,7 @@
       </div>
     </section>
 
-    <!-- Team -->
+    <!-- Equipo -->
     <section id="team" class="py-5">
       <div class="container" data-aos="fade-up">
         <h2 class="text-center mb-4" data-key="team_title">Equipo Humano</h2>
@@ -525,7 +509,7 @@
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Contacto -->
     <section id="contact" class="py-5 bg-light">
       <div class="container" data-aos="fade-up">
         <h2 class="text-center mb-5" data-key="contact_title">Contáctanos</h2>
@@ -569,66 +553,65 @@
     </footer>
 
   </div>
-  <!-- End #content -->
+  <!-- Fin de contenido -->
 
   <!-- Scripts -->
   <script>
   (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="ZrlfsIOX2TDUNDk4aNMr9";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
   </script>
-  <!-- Google Maps API (pon tu API_KEY) -->
+
+  <!-- Google Maps API -->
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAO1la-MPCGjkNZZNO-WJe6RmlqrUSmKYA&callback=initMap"
     async defer>
   </script>
   
-  <!-- 2) Script de inicialización y estilos dinámicos -->
+  <!--Estilos-->
   <script>
-    // —— Estilos de mapa —— 
-    const lightMapStyle = [];  // puedes dejar vacío o pegar aquí un JSON de estilo claro
+    const lightMapStyle = [];  
     const darkMapStyle = [
-  {
-    featureType: "administrative", // Fronteras administrativas (ciudades, países)
-    elementType: "geometry",
-    stylers: [
-      { color: "#555555" }, // Color claro pero no muy brillante
-      { visibility: "on" }
-    ]
-  },
-  {
-    featureType: "road", // Carreteras principales
-    elementType: "geometry",
-    stylers: [
-      { color: "#666666" }, // Color ligeramente más claro
-      { lightness: 20 }
-    ]
-  },
-  {
-    featureType: "road.local", // Calles locales
-    elementType: "geometry",
-    stylers: [
-      { color: "#777777" }, // Aún más claro que las carreteras principales
-      { lightness: 40 }
-    ]
-  },
-  {
-    featureType: "water", // Líneas de agua (bordes de ríos o lagos)
-    elementType: "geometry",
-    stylers: [
-      { color: "#444444" }, // Color oscuro que combina con agua
-      { lightness: -10 }
-    ]
-  },
-  {
-    featureType: "landscape", // Elementos naturales como montañas o parques
-    elementType: "geometry",
-    stylers: [
-      { color: "#333333" }, // Fondo oscuro pero claro para áreas naturales
-      { lightness: -20 }
-    ]
-  }
-];
+      {
+        featureType: "administrative",
+        elementType: "geometry",
+        stylers: [
+          { color: "#555555" }, //
+          { visibility: "on" }
+        ]
+      },
+      {
+        featureType: "road",
+        elementType: "geometry",
+        stylers: [
+          { color: "#666666" },
+          { lightness: 20 }
+        ]
+      },
+      {
+        featureType: "road.local", 
+        elementType: "geometry",
+        stylers: [
+          { color: "#777777" },
+          { lightness: 40 }
+        ]
+      },
+      {
+        featureType: "water", 
+        elementType: "geometry",
+        stylers: [
+          { color: "#444444" }, 
+          { lightness: -10 }
+        ]
+      },
+      {
+        featureType: "landscape",
+        elementType: "geometry",
+        stylers: [
+          { color: "#333333" },
+          { lightness: -20 }
+        ]
+      }
+    ];
 
-    // —— Inicializa el mapa con estilo según data-theme —— 
     function initMap() {
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
       const map = new google.maps.Map(document.getElementById("map"), {
@@ -638,7 +621,6 @@
       });
       window._myGoogleMap = map;
 
-      // —— Zonas y geocoding —— 
       const geocoder = new google.maps.Geocoder();
       const zonas = [
         { address: "J7G8+3V, 06421, Perú", name: "Cascabamba", city: "Cajamarca", description: "Instalación de polvorín en Minera Cascabamba", imageUrl:"cascabamba.jpeg" },
@@ -693,7 +675,7 @@
       });
     }
 
-    // —— Observa cambio de tema y actualiza estilo —— 
+    // —— Tema —— 
     new MutationObserver(muts => {
       muts.forEach(m => {
         if (m.attributeName === 'data-theme' && window._myGoogleMap) {
@@ -702,268 +684,260 @@
         }
       });
     }).observe(document.documentElement, { attributes: true });
-  </script>
-  <!-- Bootstrap Bundle con Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // 1) Inicializar AOS con duración más corta
-      AOS.init({ once: true, duration: 400 });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // 1) Inicializar AOS 
+        AOS.init({ once: true, duration: 400 });
 
-      // 2) Guardar todos los textos en español (arranque) para restaurar luego
-      const spanishTexts = {};
-      document.querySelectorAll('[data-key]').forEach(el => {
-        const key = el.getAttribute('data-key');
-        spanishTexts[key] = el.innerText.trim();
-      });
-
-      // 3) Traducciones al inglés
-      const translations = {
-        title: 'Grupo Sur del Perú SAC',
-        hero_welcome: 'Welcome to Grupo Sur del Perú',
-        hero_tagline: 'Comprehensive solutions in drilling, blasting, and magazine installation.',
-        hero_cta: 'Learn More',
-        hero_services: 'Specialized Services',
-        hero_services_desc: 'Drilling, blasting, magazines, and explosives distribution.',
-        hero_services_cta: 'View Services',
-        hero_projects: 'Successful Projects',
-        hero_projects_desc: 'Proven experience in mining and civil construction.',
-        hero_projects_cta: 'Our Projects',
-        about_title: 'About Us',
-        about_desc: 'At Corporación Grupo Sur del Perú SAC, we are a team of professionals passionate about providing innovative and safe solutions for the mining industry and civil construction, offering drilling and blasting services, magazine installation, explosives commercialization, and blasting technical support.',
-        about_feature1: 'Commitment to Safety',
-        about_feature2: 'Technological Innovation',
-        about_feature3: 'Guaranteed Quality',
-        about_feature4: 'Social Responsibility',
-        mission_title: 'Mission & Vision',
-        mission_subtitle: 'Mission',
-        mission_desc: '“Our mission is to provide comprehensive, high-quality, safe, and efficient solutions in drilling and blasting, magazine installation, and use of explosives for mining and civil construction in Peru, fulfilling our clients’ needs and contributing to the country’s sustainable development.”',
-        vision_subtitle: 'Vision',
-        vision_desc: '“Our vision is to establish ourselves as the leading company in comprehensive solutions for drilling and blasting for civil works and mining in Southern Peru, recognized for our excellence in quality, safety, and innovation. To be the leaders in magazine installation in Southern Peru providing advisory for better explosives efficiency to our clients.”',
-        values_title: 'Our Values',
-        value_security: 'Safety',
-        value_security_desc: 'We prioritize the protection of clients, employees, and communities.',
-        value_innovation: 'Innovation',
-        value_innovation_desc: 'We develop personalized and efficient solutions.',
-        value_quality: 'Quality',
-        value_quality_desc: 'We deliver reliable and customized services.',
-        value_social: 'Social Responsibility',
-        value_social_desc: 'We contribute to Peru’s sustainable development.',
-        history_title: 'Our History',
-        history_2012: '2012',
-        history_2012_desc: 'Toolsbox Overall SAC began operations as an integrated industrial solutions provider, offering specialized supplies, heavy equipment rental, and mining logistics.',
-        history_2016: 'June 2016',
-        history_2016_desc: 'Corporación Grupo Sur del Perú SAC emerges after restructuring, expanding operations in explosives commercialization and construction and mining services.',
-        history_2017_2022: '2017 – 2022',
-        history_2017_2022_desc: 'Technical visits to mines are conducted to optimize explosives use and magazine installation, complying with SUCAMEC regulations. Drilling and blasting work for large-scale projects begins.',
-        history_2024: '2024',
-        history_2024_desc: 'Objective: to provide specialized drilling and blasting services for large-scale mining projects, meeting the needs of major mining companies.',
-        presence_title: 'Our Presence',
-        presence_arequipa: 'Arequipa',
-        presence_arequipa_desc: 'Magazine installation at Minera Volcan.',
-        presence_apurimac: 'Apurímac',
-        presence_apurimac_desc: 'Magazine installation at Minera Pepas de Oro.',
-        presence_lima: 'Lima',
-        presence_lima_desc: 'Magazine installation at Santa Cruz de Andamarca (Minera Volcan).',
-        services_title: 'Services',
-        service_drilling: 'Specialized Drilling',
-        service_drilling_desc: 'Hydraulic fleet of latest generation (Sandvik, Junjin, Soosan) for all rock types.',
-        service_blasting: 'Controlled Blasting',
-        service_blasting_desc: 'Blasting protocols ensuring safety from 1,000 m³ to 8,000 m³ per operation.',
-        service_polvorines: 'Magazine Installation',
-        service_polvorines_desc: 'Design and construction complying with SUCAMEC regulations in Curimana, Los Reyes, and more.',
-        service_transport: 'Explosives Transport',
-        service_transport_desc: 'Fleet of certified trucks and pickups for safe transport.',
-        service_sales: 'Explosives Commercialization',
-        service_sales_desc: 'Distribution of FAMESA explosives with training and timely delivery.',
-        equipment_title: 'Our Equipment',
-        equip_dx700: 'Sandvik DX 700',
-        equip_dx700_desc: 'Powerful and versatile, ideal for deep and hard drilling.',
-        equip_dx680: 'Sandvik DX 680',
-        equip_dx680_desc: 'Robust and reliable, with excellent power-to-weight ratio.',
-        equip_ehd210: 'Everdigm EHD210',
-        equip_ehd210_desc: 'High precision and efficiency for hard rock.',
-        equip_d7: 'Atlas Copco D7',
-        equip_d7_desc: 'Durable and capable of handling complex drillings.',
-        equip_jd1400e: 'Junjin JD 1400E',
-        equip_jd1400e_desc: 'Crawler for mobility on difficult terrain, with drifter and air wash system.',
-        equip_jd800e: 'Soosan JD 800E',
-        equip_jd800e_desc: 'Efficient hydraulic system that maximizes drilling force and speed.',
-        polvorines_title: 'Our Magazine Network',
-        polvorines_arequipa: 'Arequipa Magazine',
-        polvorines_arequipa_desc: 'Secure and reliable storage for mining and construction.',
-        polvorines_tacna: 'Tacna Magazine',
-        polvorines_tacna_desc: 'Storage solutions for infrastructure and mining projects.',
-        polvorines_apurimac: 'Apurímac Magazine',
-        polvorines_apurimac_desc: 'Serves explosives storage needs for mining and construction.',
-        certifications_title: 'Certifications & Fleet',
-        certifications_sucamec: 'SUCAMEC Certifications',
-        certifications_transport: 'Explosives transport certification according to SUCAMEC.',
-        certifications_vehicles: 'Vehicles adapted for safe transport.',
-        certifications_drivers: 'Trained and certified drivers.',
-        fleet_title: 'Transport Fleet',
-        fleet_desc: 'Specialized trucks and pickups for explosives transport, meeting safety regulations.',
-        projects_title: 'Featured Projects',
-        proj_tia_maria: 'Tía María Mine',
-        proj_tia_maria_date: 'Since Dec 2024',
-        proj_tia_maria_desc: 'Drilling and blasting on access roads and platforms, designing custom drill patterns for stability and safety.',
-        proj_carretera_ayo: 'Ayo-Andamayo Road',
-        proj_carretera_ayo_date: 'Aug 2022 — Present',
-        proj_carretera_ayo_desc: 'Blasting control for Aplao-Ayo road construction, installing safe magazine complying with SUCAMEC and advising on explosives supply.',
-        proj_represa_coltani: 'Coltani Dam',
-        proj_represa_coltani_date: 'Aug 2023 — Dec 2024',
-        proj_represa_coltani_desc: 'Drilling, blasting, and rock stacking for storage and regulation system construction in Quebrada Coltani area, managing magazine per SUCAMEC.',
-        proj_polvorin_curimana: 'Curimana Magazine (Ucayali)',
-        proj_polvorin_curimana_date: 'Jan 2023 — May 2023',
-        proj_polvorin_curimana_desc: 'Design and construction of magazine complying with regulations, delivering complete technical documentation (risk analysis and drill schedules).',
-        proj_polvorin_santacruz: 'Santa Cruz de Andamarca Magazine',
-        proj_polvorin_santacruz_date: 'Sep 2023 — Mar 2024',
-        proj_polvorin_santacruz_desc: 'Magazine construction for Minera Volcan in Huaral, with detailed plans and technical specs meeting SUCAMEC standards.',
-        team_title: 'Human Team',
-        team_engineer: 'Mining Engineer',
-        team_engineer_desc: 'Professional experienced in drill pattern design and blasting supervision.',
-        team_safety: 'Industrial Safety Specialist',
-        team_safety_desc: 'Ensures compliance with SUCAMEC regulations and blasting protocols.',
-        team_operator: 'Hydraulic Drill Operator',
-        team_operator_desc: 'Specialized in operating Sandvik, Junjin, Soosan, and Atlas Copco equipment.',
-        contact_title: 'Contact Us',
-        contact_name: 'Name',
-        contact_email: 'Email',
-        contact_message: 'Message',
-        contact_submit: 'Send Message',
-        contact_whatsapp: '+51 987 374 470',
-        contact_email_link: 'ventas@gruposurdelperu.com.pe',
-        footer_copy: '© 2025 Grupo Sur del Perú SAC. All rights reserved.',
-        menu: 'Menu',
-        menu_about: 'About Us',
-        menu_mission: 'Mission & Vision',
-        menu_values: 'Values',
-        menu_history: 'History',
-        menu_presence: 'Presence',
-        menu_services: 'Services',
-        menu_equipment: 'Equipment',
-        menu_polvorines: 'Magazines',
-        menu_certifications: 'Certifications',
-        menu_projects: 'Projects',
-        menu_team: 'Team',
-        menu_contact: 'Contact'
-      };
-
-      let currentLang = 'es'; // arranque en español
-
-      // 4) Función para alternar texto en página
-      function setLanguage(lang) {
+        // 2) Guardar todos los textos en español 
+        const spanishTexts = {};
         document.querySelectorAll('[data-key]').forEach(el => {
           const key = el.getAttribute('data-key');
-          if (lang === 'en' && translations[key]) {
-            el.innerText = translations[key];
-          } else if (lang === 'es' && spanishTexts[key]) {
-            el.innerText = spanishTexts[key];
-          }
+          spanishTexts[key] = el.innerText.trim();
         });
-        // Cambia atributo <html lang="...">
-        document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'es');
-      }
 
-      // 5) Listener para el botón de idioma
-      const langToggle = document.getElementById('langToggle');
-      langToggle.addEventListener('click', () => {
-        currentLang = currentLang === 'es' ? 'en' : 'es';
-        setLanguage(currentLang);
-      });
+        // 3) Traducciones al inglés
+        const translations = {
+          title: 'Grupo Sur del Perú SAC',
+          hero_welcome: 'Welcome to Grupo Sur del Perú',
+          hero_tagline: 'Comprehensive solutions in drilling, blasting, and magazine installation.',
+          hero_cta: 'Learn More',
+          hero_services: 'Specialized Services',
+          hero_services_desc: 'Drilling, blasting, magazines, and explosives distribution.',
+          hero_services_cta: 'View Services',
+          hero_projects: 'Successful Projects',
+          hero_projects_desc: 'Proven experience in mining and civil construction.',
+          hero_projects_cta: 'Our Projects',
+          about_title: 'About Us',
+          about_desc: 'At Corporación Grupo Sur del Perú SAC, we are a team of professionals passionate about providing innovative and safe solutions for the mining industry and civil construction, offering drilling and blasting services, magazine installation, explosives commercialization, and blasting technical support.',
+          about_feature1: 'Commitment to Safety',
+          about_feature2: 'Technological Innovation',
+          about_feature3: 'Guaranteed Quality',
+          about_feature4: 'Social Responsibility',
+          mission_title: 'Mission & Vision',
+          mission_subtitle: 'Mission',
+          mission_desc: '“Our mission is to provide comprehensive, high-quality, safe, and efficient solutions in drilling and blasting, magazine installation, and use of explosives for mining and civil construction in Peru, fulfilling our clients’ needs and contributing to the country’s sustainable development.”',
+          vision_subtitle: 'Vision',
+          vision_desc: '“Our vision is to establish ourselves as the leading company in comprehensive solutions for drilling and blasting for civil works and mining in Southern Peru, recognized for our excellence in quality, safety, and innovation. To be the leaders in magazine installation in Southern Peru providing advisory for better explosives efficiency to our clients.”',
+          values_title: 'Our Values',
+          value_security: 'Safety',
+          value_security_desc: 'We prioritize the protection of clients, employees, and communities.',
+          value_innovation: 'Innovation',
+          value_innovation_desc: 'We develop personalized and efficient solutions.',
+          value_quality: 'Quality',
+          value_quality_desc: 'We deliver reliable and customized services.',
+          value_social: 'Social Responsibility',
+          value_social_desc: 'We contribute to Peru’s sustainable development.',
+          history_title: 'Our History',
+          history_2012: '2012',
+          history_2012_desc: 'Toolsbox Overall SAC began operations as an integrated industrial solutions provider, offering specialized supplies, heavy equipment rental, and mining logistics.',
+          history_2016: 'June 2016',
+          history_2016_desc: 'Corporación Grupo Sur del Perú SAC emerges after restructuring, expanding operations in explosives commercialization and construction and mining services.',
+          history_2017_2022: '2017 – 2022',
+          history_2017_2022_desc: 'Technical visits to mines are conducted to optimize explosives use and magazine installation, complying with SUCAMEC regulations. Drilling and blasting work for large-scale projects begins.',
+          history_2024: '2024',
+          history_2024_desc: 'Objective: to provide specialized drilling and blasting services for large-scale mining projects, meeting the needs of major mining companies.',
+          presence_title: 'Our Presence',
+          presence_arequipa: 'Arequipa',
+          presence_arequipa_desc: 'Magazine installation at Minera Volcan.',
+          presence_apurimac: 'Apurímac',
+          presence_apurimac_desc: 'Magazine installation at Minera Pepas de Oro.',
+          presence_lima: 'Lima',
+          presence_lima_desc: 'Magazine installation at Santa Cruz de Andamarca (Minera Volcan).',
+          services_title: 'Services',
+          service_drilling: 'Specialized Drilling',
+          service_drilling_desc: 'Hydraulic fleet of latest generation (Sandvik, Junjin, Soosan) for all rock types.',
+          service_blasting: 'Controlled Blasting',
+          service_blasting_desc: 'Blasting protocols ensuring safety from 1,000 m³ to 8,000 m³ per operation.',
+          service_polvorines: 'Magazine Installation',
+          service_polvorines_desc: 'Design and construction complying with SUCAMEC regulations in Curimana, Los Reyes, and more.',
+          service_transport: 'Explosives Transport',
+          service_transport_desc: 'Fleet of certified trucks and pickups for safe transport.',
+          service_sales: 'Explosives Commercialization',
+          service_sales_desc: 'Distribution of FAMESA explosives with training and timely delivery.',
+          equipment_title: 'Our Equipment',
+          equip_dx700: 'Sandvik DX 700',
+          equip_dx700_desc: 'Powerful and versatile, ideal for deep and hard drilling.',
+          equip_dx680: 'Sandvik DX 680',
+          equip_dx680_desc: 'Robust and reliable, with excellent power-to-weight ratio.',
+          equip_ehd210: 'Everdigm EHD210',
+          equip_ehd210_desc: 'High precision and efficiency for hard rock.',
+          equip_d7: 'Atlas Copco D7',
+          equip_d7_desc: 'Durable and capable of handling complex drillings.',
+          equip_jd1400e: 'Junjin JD 1400E',
+          equip_jd1400e_desc: 'Crawler for mobility on difficult terrain, with drifter and air wash system.',
+          equip_jd800e: 'Soosan JD 800E',
+          equip_jd800e_desc: 'Efficient hydraulic system that maximizes drilling force and speed.',
+          polvorines_title: 'Our Magazine Network',
+          polvorines_arequipa: 'Arequipa Magazine',
+          polvorines_arequipa_desc: 'Secure and reliable storage for mining and construction.',
+          polvorines_tacna: 'Tacna Magazine',
+          polvorines_tacna_desc: 'Storage solutions for infrastructure and mining projects.',
+          polvorines_apurimac: 'Apurímac Magazine',
+          polvorines_apurimac_desc: 'Serves explosives storage needs for mining and construction.',
+          certifications_title: 'Certifications & Fleet',
+          certifications_sucamec: 'SUCAMEC Certifications',
+          certifications_transport: 'Explosives transport certification according to SUCAMEC.',
+          certifications_vehicles: 'Vehicles adapted for safe transport.',
+          certifications_drivers: 'Trained and certified drivers.',
+          fleet_title: 'Transport Fleet',
+          fleet_desc: 'Specialized trucks and pickups for explosives transport, meeting safety regulations.',
+          projects_title: 'Featured Projects',
+          proj_tia_maria: 'Tía María Mine',
+          proj_tia_maria_date: 'Since Dec 2024',
+          proj_tia_maria_desc: 'Drilling and blasting on access roads and platforms, designing custom drill patterns for stability and safety.',
+          proj_carretera_ayo: 'Ayo-Andamayo Road',
+          proj_carretera_ayo_date: 'Aug 2022 — Present',
+          proj_carretera_ayo_desc: 'Blasting control for Aplao-Ayo road construction, installing safe magazine complying with SUCAMEC and advising on explosives supply.',
+          proj_represa_coltani: 'Coltani Dam',
+          proj_represa_coltani_date: 'Aug 2023 — Dec 2024',
+          proj_represa_coltani_desc: 'Drilling, blasting, and rock stacking for storage and regulation system construction in Quebrada Coltani area, managing magazine per SUCAMEC.',
+          proj_polvorin_curimana: 'Curimana Magazine (Ucayali)',
+          proj_polvorin_curimana_date: 'Jan 2023 — May 2023',
+          proj_polvorin_curimana_desc: 'Design and construction of magazine complying with regulations, delivering complete technical documentation (risk analysis and drill schedules).',
+          proj_polvorin_santacruz: 'Santa Cruz de Andamarca Magazine',
+          proj_polvorin_santacruz_date: 'Sep 2023 — Mar 2024',
+          proj_polvorin_santacruz_desc: 'Magazine construction for Minera Volcan in Huaral, with detailed plans and technical specs meeting SUCAMEC standards.',
+          team_title: 'Human Team',
+          team_engineer: 'Mining Engineer',
+          team_engineer_desc: 'Professional experienced in drill pattern design and blasting supervision.',
+          team_safety: 'Industrial Safety Specialist',
+          team_safety_desc: 'Ensures compliance with SUCAMEC regulations and blasting protocols.',
+          team_operator: 'Hydraulic Drill Operator',
+          team_operator_desc: 'Specialized in operating Sandvik, Junjin, Soosan, and Atlas Copco equipment.',
+          contact_title: 'Contact Us',
+          contact_name: 'Name',
+          contact_email: 'Email',
+          contact_message: 'Message',
+          contact_submit: 'Send Message',
+          contact_whatsapp: '+51 987 374 470',
+          contact_email_link: 'ventas@gruposurdelperu.com.pe',
+          footer_copy: '© 2025 Grupo Sur del Perú SAC. All rights reserved.',
+          menu: 'Menu',
+          menu_about: 'About Us',
+          menu_mission: 'Mission & Vision',
+          menu_values: 'Values',
+          menu_history: 'History',
+          menu_presence: 'Presence',
+          menu_services: 'Services',
+          menu_equipment: 'Equipment',
+          menu_polvorines: 'Magazines',
+          menu_certifications: 'Certifications',
+          menu_projects: 'Projects',
+          menu_team: 'Team',
+          menu_contact: 'Contact'
+        };
 
-      // 6) Intercambio de temas y cambio de íconos
-      const root = document.documentElement;
-      const themeToggle = document.getElementById('themeToggle');
-      const iconTheme = document.getElementById('iconTheme');
-      const iconLang   = document.getElementById('iconLang');
-      const iconMenu   = document.getElementById('iconMenu');
-      const navbar     = document.getElementById('mainNav');
-      const inputs     = document.querySelectorAll('#contact .form-control');
+        let currentLang = 'es'; 
 
-      function updateThemeUI() {
-        if (root.getAttribute('data-theme') === 'light') {
-          // Cambiar a Modo Claro
-          iconTheme.className = 'bi bi-moon-fill fs-4';
-          iconLang.style.color   = '#D63438';
-          iconTheme.style.color = '#D63438';
-          iconMenu.style.color  = '#D63438';
-          navbar.style.background      = 'rgba(254,254,254,0.8)';
-          navbar.style.backdropFilter  = 'blur(10px)';
-          // Inputs fondo claro
-          inputs.forEach(i => {
-            i.style.backgroundColor = '#FFFFFF';
-            i.style.color = '#282829';
+        // 4) Función para alternar texto
+        function setLanguage(lang) {
+          document.querySelectorAll('[data-key]').forEach(el => {
+            const key = el.getAttribute('data-key');
+            if (lang === 'en' && translations[key]) {
+              el.innerText = translations[key];
+            } else if (lang === 'es' && spanishTexts[key]) {
+              el.innerText = spanishTexts[key];
+            }
           });
-        } else {
-          // Cambiar a Modo Oscuro
-          iconTheme.className = 'bi bi-sun-fill fs-4';
-          iconLang.style.color   = '#D63438';
-          iconTheme.style.color = '#D63438';
-          iconMenu.style.color  = '#D63438';
-          navbar.style.background      = 'rgba(40,40,41,0.8)';
-          navbar.style.backdropFilter  = 'blur(10px)';
-          // Inputs fondo gris oscuro
-          inputs.forEach(i => {
-            i.style.backgroundColor = '#404040';
-            i.style.color = '#FEFEFE';
-          });
+          document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'es');
         }
 
-        // AÑADIDO: forzar color rojo en ícono “Cerrar menú” y flechas del carrusel
-        const closeIcon = document.getElementById('closeMenuIcon');
-        const prevIcon  = document.getElementById('equipPrev');
-        const nextIcon  = document.getElementById('equipNext');
-        const arrowColor = '#D63438';
+        // 5) Listener para el botón de idioma
+        const langToggle = document.getElementById('langToggle');
+        langToggle.addEventListener('click', () => {
+          currentLang = currentLang === 'es' ? 'en' : 'es';
+          setLanguage(currentLang);
+        });
 
-        if (closeIcon) {
-          closeIcon.style.color = arrowColor;
-        }
-        if (prevIcon) {
-          prevIcon.style.color = arrowColor;
-        }
-        if (nextIcon) {
-          nextIcon.style.color = arrowColor;
-        }
-      }
+        // 6) Intercambio de temas y cambio de íconos
+        const root = document.documentElement;
+        const themeToggle = document.getElementById('themeToggle');
+        const iconTheme = document.getElementById('iconTheme');
+        const iconLang   = document.getElementById('iconLang');
+        const iconMenu   = document.getElementById('iconMenu');
+        const navbar     = document.getElementById('mainNav');
+        const inputs     = document.querySelectorAll('#contact .form-control');
 
-      // Inicializar estado de tema
-      updateThemeUI();
+        function updateThemeUI() {
+          if (root.getAttribute('data-theme') === 'light') {
+            // Cambiar a Modo Claro
+            iconTheme.className = 'bi bi-moon-fill fs-4';
+            iconLang.style.color   = '#D63438';
+            iconTheme.style.color = '#D63438';
+            iconMenu.style.color  = '#D63438';
+            navbar.style.background      = 'rgba(254,254,254,0.8)';
+            navbar.style.backdropFilter  = 'blur(10px)';
+            // Inputs fondo claro
+            inputs.forEach(i => {
+              i.style.backgroundColor = '#FFFFFF';
+              i.style.color = '#282829';
+            });
+          } else {
+            // Cambiar a Modo Oscuro
+            iconTheme.className = 'bi bi-sun-fill fs-4';
+            iconLang.style.color   = '#D63438';
+            iconTheme.style.color = '#D63438';
+            iconMenu.style.color  = '#D63438';
+            navbar.style.background      = 'rgba(40,40,41,0.8)';
+            navbar.style.backdropFilter  = 'blur(10px)';
+            // Inputs fondo gris oscuro
+            inputs.forEach(i => {
+              i.style.backgroundColor = '#404040';
+              i.style.color = '#FEFEFE';
+            });
+          }
 
-      themeToggle.addEventListener('click', () => {
-        if (root.getAttribute('data-theme') === 'dark') {
-          root.setAttribute('data-theme', 'light');
-        } else {
-          root.setAttribute('data-theme', 'dark');
+          const closeIcon = document.getElementById('closeMenuIcon');
+          const prevIcon  = document.getElementById('equipPrev');
+          const nextIcon  = document.getElementById('equipNext');
+          const arrowColor = '#D63438';
+
+          if (closeIcon) {
+            closeIcon.style.color = arrowColor;
+          }
+          if (prevIcon) {
+            prevIcon.style.color = arrowColor;
+          }
+          if (nextIcon) {
+            nextIcon.style.color = arrowColor;
+          }
         }
+
+        // Inicializar estado de tema
         updateThemeUI();
-      });
 
-      // 7) Blur content al abrir/cerrar offcanvas
-      const offcanvasEl = document.getElementById('offcanvasMenu');
-      offcanvasEl.addEventListener('show.bs.offcanvas', () => document.getElementById('content').classList.add('blur-bg'));
-      offcanvasEl.addEventListener('hidden.bs.offcanvas', () => document.getElementById('content').classList.remove('blur-bg'));
-
-      // 8) Forzar scroll suave desde offcanvas a la sección correspondiente
-      document.querySelectorAll('.offcanvas .nav-link').forEach(link => {
-        link.addEventListener('click', e => {
-          e.preventDefault();
-          const targetId = link.getAttribute('href').substring(1);
-          const targetEl = document.getElementById(targetId);
-          if (targetEl) {
-            // Cerrar manualmente el offcanvas
-            const offcanvasInstance = bootstrap.Offcanvas.getOrCreateInstance(offcanvasEl);
-            offcanvasInstance.hide();
-
-            // Tras 200 ms (tiempo estimado de cierre), hacer scroll suave
-            setTimeout(() => {
-              targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 200);
+        themeToggle.addEventListener('click', () => {
+          if (root.getAttribute('data-theme') === 'dark') {
+            root.setAttribute('data-theme', 'light');
+          } else {
+            root.setAttribute('data-theme', 'dark');
           }
+          updateThemeUI();
         });
-      });
 
-    }); // FIN DOMContentLoaded
-  </script>
+        const offcanvasEl = document.getElementById('offcanvasMenu');
+        offcanvasEl.addEventListener('show.bs.offcanvas', () => document.getElementById('content').classList.add('blur-bg'));
+        offcanvasEl.addEventListener('hidden.bs.offcanvas', () => document.getElementById('content').classList.remove('blur-bg'));
+
+        document.querySelectorAll('.offcanvas .nav-link').forEach(link => {
+          link.addEventListener('click', e => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetEl = document.getElementById(targetId);
+            if (targetEl) {
+              const offcanvasInstance = bootstrap.Offcanvas.getOrCreateInstance(offcanvasEl);
+              offcanvasInstance.hide();
+
+              setTimeout(() => {
+                targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }, 250);
+            }
+          });
+        });
+
+      }); 
+    </script>
