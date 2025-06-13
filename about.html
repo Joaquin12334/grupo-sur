@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Grupo Sur del Perú SAC</title>
+  <title>Nosotros & Historia – Grupo Sur del Perú SAC</title>
   <meta name="theme-color" content="#282829" />
   <link rel="icon" href="iconow.png" type="image/png" />
+
+  <!-- Fuentes e iconos -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
@@ -15,11 +17,11 @@
 
 <body>
   <!-- Offcanvas Menu (solo móvil) -->
-  <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasMenu">
+  <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
     <div class="offcanvas-header border-0">
-      <h5 class="offcanvas-title">Menú</h5>
+      <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menú</h5>
       <button type="button" class="btn btn-link p-1 me-3" data-bs-dismiss="offcanvas" aria-label="Cerrar">
-        <i id="closeMenuIcon" class="bi bi-x fs-4"></i>
+        <i id="closeMenuIcon" class="bi bi-x fs-4" style="color: #D63438;"></i>
       </button>
     </div>
     <div class="offcanvas-body">
@@ -35,10 +37,11 @@
 
   <!-- Navbar principal -->
   <nav id="mainNav" class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="logo2.png" alt="Logo Grupo Sur" class="d-inline-block align-text-top" />
+    <div class="container d-flex align-items-center justify-content-between">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="logo2.png" alt="Logo Grupo Sur" class="navbar-logo" />
       </a>
+      <!-- Enlaces en escritorio -->
       <ul class="navbar-nav ms-auto d-none d-lg-flex">
         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
         <li class="nav-item"><a class="nav-link active" href="about.html">Nosotros</a></li>
@@ -47,11 +50,15 @@
         <li class="nav-item"><a class="nav-link" href="index.html#contact">Contacto</a></li>
       </ul>
       <div class="d-flex align-items-center">
+        <!-- Theme toggle -->
         <button id="themeToggle" class="btn btn-link btn-sm p-1 me-3" aria-label="Cambiar tema">
-          <i class="bi bi-moon-fill fs-4" id="iconTheme"></i>
+          <i id="iconTheme" class="bi bi-moon-fill fs-4"></i>
         </button>
-        <button class="btn btn-link btn-sm p-1 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Abrir menú">
-          <i class="bi bi-list fs-4" id="iconMenu"></i>
+        <!-- Offcanvas toggle en móvil -->
+        <button class="btn btn-link btn-sm p-1 d-lg-none" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+                aria-controls="offcanvasMenu" aria-label="Abrir menú">
+          <i id="iconMenu" class="bi bi-list fs-4"></i>
         </button>
       </div>
     </div>
@@ -188,19 +195,26 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
+    // ScrollSpy
+    bootstrap.ScrollSpy.getOrCreateInstance(document.body, {
+      target: '#mainNav',
+      offset: 80
+    });
+
+    // Tema guardado
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      document.documentElement.setAttribute('data-theme', savedTheme);
-    }
+    if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
 
     document.addEventListener('DOMContentLoaded', () => {
       AOS.init({ once: true, duration: 400 });
 
-      const root = document.documentElement;
+      const root        = document.documentElement;
       const themeToggle = document.getElementById('themeToggle');
-      const iconTheme = document.getElementById('iconTheme');
-      const iconMenu = document.getElementById('iconMenu');
-      const navbar = document.getElementById('mainNav');
+      const iconTheme   = document.getElementById('iconTheme');
+      const iconMenu    = document.getElementById('iconMenu');
+      const navbar      = document.getElementById('mainNav');
+      const offcanvasEl = document.getElementById('offcanvasMenu');
+      const content     = document.getElementById('content');
 
       function updateThemeUI() {
         const isLight = root.getAttribute('data-theme') === 'light';
@@ -209,17 +223,17 @@
         navbar.style.background = isLight ? 'rgba(254,254,254,0.8)' : 'rgba(40,40,41,0.8)';
         navbar.style.backdropFilter = 'blur(10px)';
       }
+      updateThemeUI();
 
       themeToggle.addEventListener('click', () => {
-        const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        root.setAttribute('data-theme', nextTheme);
-        localStorage.setItem('theme', nextTheme); // ⬅ Guardar en navegador
+        const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
         updateThemeUI();
       });
 
-      const offcanvasEl = document.getElementById('offcanvasMenu');
-      const content = document.getElementById('content');
-      offcanvasEl.addEventListener('show.bs.offcanvas', () => content.classList.add('blur-bg'));
+      // Offcanvas blur
+      offcanvasEl.addEventListener('show.bs.offcanvas',   () => content.classList.add('blur-bg'));
       offcanvasEl.addEventListener('hidden.bs.offcanvas', () => content.classList.remove('blur-bg'));
     });
   </script>
