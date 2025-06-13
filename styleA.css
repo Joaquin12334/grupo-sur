@@ -166,6 +166,41 @@ a:hover {
   width: 100%;
 }
 
+
+@media (max-width: 991.98px) {
+  #mainNav .container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    position: relative !important;  
+  }
+
+  #mainNav .navbar-brand {
+    position: absolute !important;
+    left: 30% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  #mainNav #themeToggle,
+  #mainNav .btn.d-lg-none {
+    position: absolute !important;
+    top: 70% !important;
+    transform: translateY(-35%) !important;
+  }
+
+  #mainNav #themeToggle {
+    right: 4rem !important;
+  }
+
+  #mainNav .btn.d-lg-none {
+    right: 1.5rem !important;
+  }
+}
+
+#closeMenuIcon {
+  color: var(--clr-primary) !important;
+}
+
 /* MODOS DE PAGINA */
 #themeToggle i,
 #langToggle i,
@@ -204,72 +239,14 @@ a:hover {
   height: 45px;
 }
 
-/* === HERO CARRUSEL === */
+/* === SOBRE NOSOTROS === */
 
-
-header {
-  position: relative;
-  overflow: hidden;
-}
-
-.carousel-item img {
-  object-fit: cover;
-  height: 100vh;
-  width: 100%;
-}
-
-[data-theme="dark"] #about {
+[data-theme="dark"] #about{
   background-color: #404040;
 }
-[data-theme="light"] #about {
-  background-color: #bcbcbc;
+[data-theme="light"] #about{
+  background: #d3d3d3;
 }
-
-.carousel-caption h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
-  transition: color var(--transition);
-}
-
-.carousel-caption p {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-  transition: color var(--transition);
-}
-
-.carousel-caption .btn {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  background: var(--clr-primary);
-  border: none;
-  transition: filter var(--transition);
-}
-
-.carousel-caption .btn:hover {
-  filter: brightness(0.9);
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 2;
-}
-
-@media (max-width: 992px) {
-  .carousel-caption h1 {
-    font-size: 2.5rem;
-  }
-  .carousel-caption p {
-    font-size: 1rem;
-  }
-}
-
-
-
-/* === SOBRE NOSOTROS === */
 
 #about .features {
   list-style: none;
