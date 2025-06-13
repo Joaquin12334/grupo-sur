@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grupo Sur del Perú SAC</title>
+  <meta name="theme-color" content="#282829" />
+  <link rel="icon" href="iconow.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styleA.css" />
+</head>
+
+<body>
+  <!-- Offcanvas Menu (solo móvil) -->
+  <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasMenu">
+    <div class="offcanvas-header border-0">
+      <h5 class="offcanvas-title">Menú</h5>
+      <button type="button" class="btn btn-link p-1 me-3" data-bs-dismiss="offcanvas" aria-label="Cerrar">
+        <i id="closeMenuIcon" class="bi bi-x fs-4"></i>
+      </button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Equipo</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Navbar principal -->
+  <nav id="mainNav" class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="logo2.png" alt="Logo Grupo Sur" class="d-inline-block align-text-top" />
+      </a>
+      <ul class="navbar-nav ms-auto d-none d-lg-flex">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Equipo</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contacto</a></li>
+      </ul>
+      <div class="d-flex align-items-center">
+        <button id="themeToggle" class="btn btn-link btn-sm p-1 me-3" aria-label="Cambiar tema">
+          <i class="bi bi-moon-fill fs-4" id="iconTheme"></i>
+        </button>
+        <button class="btn btn-link btn-sm p-1 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Abrir menú">
+          <i class="bi bi-list fs-4" id="iconMenu"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="content">
+    <section id="espaciado"></section>
+
+    <!-- Sobre nosotros -->
+    <section id="about" class="py-5 mt-5 pt-5">
+      <div class="container" data-aos="fade-up">
+        <div class="row align-items-center gy-4">
+          <div class="col-md-6" data-aos="fade-right">
+            <img src="about.jpeg" alt="Sobre Nosotros" class="img-fluid rounded-3 shadow-lg" />
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <h2>Sobre Nosotros</h2>
+            <p>En Corporación Grupo Sur del Perú SAC, somos un equipo de profesionales apasionados por brindar soluciones innovadoras y seguras para la industria minera y la construcción civil, ofreciendo servicios de perforación y voladura, instalación de polvorines, comercialización de explosivos y asistencia técnica sobre voladura.</p>
+            <ul class="list-unstyled features">
+              <li><i class="bi bi-shield-lock-fill me-2"></i>Compromiso con la seguridad</li>
+              <li><i class="bi bi-lightbulb-fill me-2"></i>Innovación tecnológica</li>
+              <li><i class="bi bi-award-fill me-2"></i>Calidad garantizada</li>
+              <li><i class="bi bi-people-fill me-2"></i>Responsabilidad social</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Valores -->
+    <section id="values" class="py-5">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-4">Nuestros Valores</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-shield-fill-check display-4 mb-3" style="color: #D63438;"></i>
+              <h5>Seguridad</h5>
+              <p>Priorizamos la protección de clientes, empleados y comunidades.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-lightbulb display-4 mb-3" style="color: #D63438;"></i>
+              <h5>Innovación</h5>
+              <p>Desarrollamos soluciones personalizadas y eficientes.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="zoom-in" data-aos-delay="300">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-award display-4 mb-3" style="color: #D63438;"></i>
+              <h5>Calidad</h5>
+              <p>Brindamos servicios confiables y personalizados.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="zoom-in" data-aos-delay="400">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-people display-4 mb-3" style="color: #D63438;"></i>
+              <h5>Responsabilidad Social</h5>
+              <p>Contribuimos al desarrollo sostenible del Perú.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Misión y Visión -->
+    <section id="mission" class="py-5 bg-light">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-4">Misión & Visión</h2>
+        <div class="row">
+          <div class="col-md-6" data-aos="fade-right">
+            <h5>Misión</h5>
+            <p>“Nuestra misión es brindar soluciones integrales de alta calidad, seguridad y eficiencia en perforación y voladura, instalación de polvorines y uso de explosivos para la minería y construcción civil en el Perú, satisfaciendo las necesidades de nuestros clientes y contribuyendo al desarrollo sostenible del país.”</p>
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <h5>Visión</h5>
+            <p>“Nuestra visión es establecernos como la empresa líder en soluciones integrales en perforación y voladura para obras civiles y minería en el Sur del Perú, reconocidos por nuestra excelencia en calidad, seguridad e innovación. Ser los líderes en instalación de polvorines en el Sur del Perú brindando asesoramiento para una mejor eficiencia en el uso de explosivos para nuestros clientes.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Historia -->
+    <section id="history" class="py-5">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-5">Nuestra Historia</h2>
+        <ul class="timeline list-unstyled">
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <span class="timeline-icon" style="color: #D63438;"></span>
+            <div class="timeline-content">
+              <h5>2012</h5>
+              <p>Toolsbox Overall SAC inicia operaciones como proveedor integral de soluciones industriales, ofreciendo suministros especializados, renta de vehículos pesados y logística minera.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+            <span class="timeline-icon" style="color: #D63438;"></span>
+            <div class="timeline-content">
+              <h5>Junio 2016</h5>
+              <p>Surge Corporación Grupo Sur del Perú SAC tras restructuración, expandiendo operaciones en comercialización de explosivos y servicios de construcción y minería.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+            <span class="timeline-icon" style="color: #D63438;"></span>
+            <div class="timeline-content">
+              <h5>2017 – 2022</h5>
+              <p>Se realizan visitas técnicas a minas para optimizar uso de explosivos e instalación de polvorines, cumpliendo normativas SUCAMEC. Inician trabajos de perforación y voladura para proyectos de gran envergadura.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+            <span class="timeline-icon" style="color: #D63438;"></span>
+            <div class="timeline-content">
+              <h5>2024</h5>
+              <p>Objetivo: brindar servicios especializados de perforación y voladura para proyectos mineros de gran escala, satisfaciendo necesidades de las principales empresas mineras.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4">
+      <div class="container text-center">
+        <p class="mb-3">© 2025 Grupo Sur del Perú SAC. Todos los derechos reservados.</p>
+        <div>
+          <a href="https://wa.me/51987374470" target="_blank" class="me-3"><i class="bi bi-whatsapp fs-2"></i></a>
+          <a href="mailto:ventas@gruposurdelperu.com.pe"><i class="bi bi-envelope-fill fs-2"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({ once: true, duration: 400 });
+
+      const root = document.documentElement;
+      const themeToggle = document.getElementById('themeToggle');
+      const iconTheme = document.getElementById('iconTheme');
+      const iconMenu = document.getElementById('iconMenu');
+      const navbar = document.getElementById('mainNav');
+
+      function updateThemeUI() {
+        const isLight = root.getAttribute('data-theme') === 'light';
+        iconTheme.className = isLight ? 'bi bi-moon-fill fs-4' : 'bi bi-sun-fill fs-4';
+        iconTheme.style.color = iconMenu.style.color = '#D63438';
+        navbar.style.background = isLight ? 'rgba(254,254,254,0.8)' : 'rgba(40,40,41,0.8)';
+        navbar.style.backdropFilter = 'blur(10px)';
+      }
+
+      themeToggle.addEventListener('click', () => {
+        const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', nextTheme);
+        localStorage.setItem('theme', nextTheme); // ⬅ Guardar en navegador
+        updateThemeUI();
+      });
+
+      const offcanvasEl = document.getElementById('offcanvasMenu');
+      const content = document.getElementById('content');
+      offcanvasEl.addEventListener('show.bs.offcanvas', () => content.classList.add('blur-bg'));
+      offcanvasEl.addEventListener('hidden.bs.offcanvas', () => content.classList.remove('blur-bg'));
+    });
+  </script>
+</body>
+</html>

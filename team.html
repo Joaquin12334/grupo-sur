@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-key="title">Grupo Sur del Perú SAC</title>
+  <meta name="theme-color" content="#282829">
+  <link rel="icon" type="image/png" href="iconow.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="styleT.css">
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header border-0">
+      <h5 class="offcanvas-title" id="offcanvasMenuLabel" data-key="menu">Menú</h5>
+      <button type="button" class="btn btn-link p-1 me-3" data-bs-dismiss="offcanvas" aria-label="Cerrar">
+        <i id="closeMenuIcon" class="bi bi-x fs-4"></i>
+      </button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Equipo</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Navbar principal -->
+  <nav id="mainNav" class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="logo2.png" alt="Logo Grupo Sur" class="d-inline-block align-text-top">
+      </a>
+
+      <!-- Enlaces directos en escritorio -->
+      <ul class="navbar-nav ms-auto d-none d-lg-flex">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Equipo</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contacto</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center">
+        <!-- Theme toggle (siempre visible) -->
+        <button id="themeToggle" class="btn btn-link btn-sm p-1 me-3" aria-label="Cambiar tema">
+          <i class="bi bi-moon-fill fs-4" id="iconTheme"></i>
+        </button>
+        <!-- Botón de offcanvas solo en móvil -->
+        <button class="btn btn-link btn-sm p-1 d-lg-none" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+                aria-controls="offcanvasMenu" aria-label="Abrir menú">
+          <i class="bi bi-list fs-4" id="iconMenu"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="content">
+    <section id="espaciado"></section>
+
+        <!-- Equipamiento Carrusel -->
+    <section id="equipment" class="py-5">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-5" data-key="equipment_title">Nuestro Equipo</h2>
+        <div id="equipCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+          <div class="carousel-indicators mb-4 justify-content-center">
+            <button type="button" data-bs-target="#equipCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#equipCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#equipCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#equipCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#equipCarousel" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#equipCarousel" data-bs-slide-to="5"></button>
+          </div>
+          <div class="carousel-inner text-center">
+            <div class="carousel-item active">
+              <img src="sandvik-dx-700.jpeg" class="d-block mx-auto rounded-3 shadow-lg equipment-img" alt="Sandvik DX 700">
+              <div class="equipment-caption mt-3">
+                <h5 data-key="equip_dx700">Sandvik DX 700</h5>
+                <p data-key="equip_dx700_desc">Potente y versátil, ideal para perforaciones profundas y duras.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="sandvik-dx-680.jpeg" class="d-block mx-auto rounded-3 shadow-lg equipment-img" alt="Sandvik DX 680">
+              <div class="equipment-caption mt-3">
+                <h5 data-key="equip_dx680">Sandvik DX 680</h5>
+                <p data-key="equip_dx680_desc">Robusta y confiable, con excelente relación potencia-peso.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="everdigm-ehd210.jpeg" class="d-block mx-auto rounded-3 shadow-lg equipment-img" alt="Everdigm EHD210">
+              <div class="equipment-caption mt-3">
+                <h5 data-key="equip_ehd210">Everdigm EHD210</h5>
+                <p data-key="equip_ehd210_desc">Alta precisión y eficiencia para rocas duras.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="atlas-copoco-d7.jpeg" class="d-block mx-auto rounded-3 shadow-lg equipment-img" alt="Atlas Copco D7">
+              <div class="equipment-caption mt-3">
+                <h5 data-key="equip_d7">Atlas Copco D7</h5>
+                <p data-key="equip_d7_desc">Duradurabilidad y capacidad para perforaciones complejas.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="junjin-jd-1400e.jpeg" class="d-block mx-auto rounded-3 shadow-lg equipment-img" alt="Junjin JD 1400E">
+              <div class="equipment-caption mt-3">
+                <h5 data-key="equip_jd1400e">Junjin JD 1400E</h5>
+                <p data-key="equip_jd1400e_desc">Oruga para movilidad en terrenos difíciles, con drifter y sistema de lavado de aire.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="soosan-jd-800e.jpeg" class="d-block mx-auto rounded-3 shadow-lg equipment-img" alt="Soosan JD 800E">
+              <div class="equipment-caption mt-3">
+                <h5 data-key="equip_jd800e">Soosan JD 800E</h5>
+                <p data-key="equip_jd800e_desc">Sistema hidráulico eficiente que maximiza fuerza y velocidad en perforación.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#equipCarousel" data-bs-slide="prev" aria-label="Anterior">
+            <i id="equipPrev" class="bi bi-chevron-left fs-2" style="color: #D63438;"></i>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#equipCarousel" data-bs-slide="next" aria-label="Siguiente">
+            <i id="equipNext" class="bi bi-chevron-right fs-2" style="color: #D63438;"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipo -->
+    <section id="team" class="py-5">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-4" data-key="team_title">Equipo Humano</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col" data-aos="flip-left" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-person-badge display-4 mb-3" style="color: #D63438;"></i>
+              <h5 data-key="team_engineer">Ingeniero de Minas</h5>
+              <p data-key="team_engineer_desc">Profesional con experiencia en diseño de mallas de perforación y supervisión de voladuras.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="flip-left" data-aos-delay="200">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-person-badge display-4 mb-3" style="color: #D63438;"></i>
+              <h5 data-key="team_safety">Especialista en Seguridad Industrial</h5>
+              <p data-key="team_safety_desc">Garantiza cumplimiento de normativas SUCAMEC y protocolos de voladura.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="flip-left" data-aos-delay="300">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-person-badge display-4 mb-3" style="color: #D63438;"></i>
+              <h5 data-key="team_operator">Operador de Perforadoras Hidráulicas</h5>
+              <p data-key="team_operator_desc">Especializado en manejo de equipos Sandvik, Junjin, Soosan y Atlas Copco.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Polvorines Red -->
+    <section id="polvorines" class="py-5 bg-light">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-4" data-key="polvorines_title">Nuestra Red de Polvorines</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+          <div class="col" data-aos="flip-up" data-aos-delay="100">
+            <i class="bi bi-building-fill fs-1 " style="color: #D63438;"></i>
+            <h5 data-key="polvorines_arequipa">Polvorín Arequipa</h5>
+            <p data-key="polvorines_arequipa_desc">Almacenamiento seguro y confiable para industria minera y construcción.</p>
+          </div>
+          <div class="col" data-aos="flip-up" data-aos-delay="200">
+            <i class="bi bi-building-fill fs-1 " style="color: #D63438;"></i>
+            <h5 data-key="polvorines_tacna">Polvorín Tacna</h5>
+            <p data-key="polvorines_tacna_desc">Soluciones de almacenamiento para proyectos de infraestructura y minería.</p>
+          </div>
+          <div class="col" data-aos="flip-up" data-aos-delay="300">
+            <i class="bi bi-building-fill fs-1 " style="color: #D63438;"></i>
+            <h5 data-key="polvorines_apurimac">Polvorín Apurímac</h5>
+            <p data-key="polvorines_apurimac_desc">Atiende necesidades de almacenamiento de explosivos para minería y construcción.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4">
+      <div class="container text-center">
+        <p class="mb-3" data-key="footer_copy">© 2025 Grupo Sur del Perú SAC. Todos los derechos reservados.</p>
+        <div>
+          <a href="https://wa.me/51987374470" target="_blank" class="me-3"><i class="bi bi-whatsapp fs-2"></i></a>
+          <a href="mailto:ventas@gruposurdelperu.com.pe"><i class="bi bi-envelope-fill fs-2"></i></a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <!-- Fin de contenido -->
+
+  <!-- Scripts -->
+
+  <!-- Google Maps API -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAO1la-MPCGjkNZZNO-WJe6RmlqrUSmKYA&callback=initMap"
+    async defer>
+  </script>
+  
+  <!--Estilos-->
+
+  <!-- Bootstrap y AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  
+  <!-- Main Script: AOS + Theme Toggle only -->
+  <script>
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1) Inicializar AOS 
+      AOS.init({ once: true, duration: 400 });
+
+      // 2) Intercambio de temas y cambio de íconos
+      const root       = document.documentElement;
+      const themeToggle= document.getElementById('themeToggle');
+      const iconTheme  = document.getElementById('iconTheme');
+      const iconMenu   = document.getElementById('iconMenu');
+      const navbar     = document.getElementById('mainNav');
+      const inputs     = document.querySelectorAll('#contact .form-control');
+
+      function updateThemeUI() {
+        if (root.getAttribute('data-theme') === 'light') {
+          // Modo Claro
+          iconTheme.className = 'bi bi-moon-fill fs-4';
+          iconTheme.style.color = '#D63438';
+          iconMenu.style.color  = '#D63438';
+          navbar.style.background      = 'rgba(254,254,254,0.8)';
+          navbar.style.backdropFilter  = 'blur(10px)';
+          inputs.forEach(i => {
+            i.style.backgroundColor = '#FFFFFF';
+            i.style.color = '#282829';
+          });
+        } else {
+          // Modo Oscuro
+          iconTheme.className = 'bi bi-sun-fill fs-4';
+          iconTheme.style.color = '#D63438';
+          iconMenu.style.color  = '#D63438';
+          navbar.style.background      = 'rgba(40,40,41,0.8)';
+          navbar.style.backdropFilter  = 'blur(10px)';
+          inputs.forEach(i => {
+            i.style.backgroundColor = '#404040';
+            i.style.color = '#FEFEFE';
+          });
+        }
+
+        // Colorear otros íconos (offcanvas, carrusel, etc.)
+        const closeIcon = document.getElementById('closeMenuIcon');
+        const prevIcon  = document.getElementById('equipPrev');
+        const nextIcon  = document.getElementById('equipNext');
+        const arrowColor = '#D63438';
+
+        if (closeIcon) closeIcon.style.color = arrowColor;
+        if (prevIcon)  prevIcon.style.color  = arrowColor;
+        if (nextIcon)  nextIcon.style.color  = arrowColor;
+      }
+
+      // Inicializar estado de tema
+      updateThemeUI();
+
+      themeToggle.addEventListener('click', () => {
+        const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', nextTheme);
+        localStorage.setItem('theme', nextTheme); 
+        updateThemeUI();
+      });
+
+      // Offcanvas menu blur
+      const offcanvasEl = document.getElementById('offcanvasMenu');
+      offcanvasEl.addEventListener('show.bs.offcanvas',   () => document.getElementById('content').classList.add('blur-bg'));
+      offcanvasEl.addEventListener('hidden.bs.offcanvas', () => document.getElementById('content').classList.remove('blur-bg'));
+
+      // Offcanvas links smooth scroll
+      document.querySelectorAll('.offcanvas .nav-link').forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href').substring(1);
+          const targetEl = document.getElementById(targetId);
+          if (targetEl) {
+            bootstrap.Offcanvas.getOrCreateInstance(offcanvasEl).hide();
+            setTimeout(() => targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 250);
+          }
+        });
+      });
+
+    });
+  </script>
+

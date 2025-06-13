@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-key="title">Grupo Sur del Perú SAC</title>
+  <meta name="theme-color" content="#282829">
+  <link rel="icon" type="image/png" href="iconow.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="styleS.css">
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header border-0">
+      <h5 class="offcanvas-title" id="offcanvasMenuLabel" data-key="menu">Menú</h5>
+      <button type="button" class="btn btn-link p-1 me-3" data-bs-dismiss="offcanvas" aria-label="Cerrar">
+        <i id="closeMenuIcon" class="bi bi-x fs-4"></i>
+      </button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Equipo</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Navbar principal -->
+  <nav id="mainNav" class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="logo2.png" alt="Logo Grupo Sur" class="d-inline-block align-text-top">
+      </a>
+
+      <!-- Enlaces directos en escritorio -->
+      <ul class="navbar-nav ms-auto d-none d-lg-flex">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Equipo</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contacto</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center">
+        <!-- Theme toggle (siempre visible) -->
+        <button id="themeToggle" class="btn btn-link btn-sm p-1 me-3" aria-label="Cambiar tema">
+          <i class="bi bi-moon-fill fs-4" id="iconTheme"></i>
+        </button>
+        <!-- Botón de offcanvas solo en móvil -->
+        <button class="btn btn-link btn-sm p-1 d-lg-none" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+                aria-controls="offcanvasMenu" aria-label="Abrir menú">
+          <i class="bi bi-list fs-4" id="iconMenu"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="content">
+    <section id="espaciado"></section>
+
+        <!-- Nuestra presencia -->
+    <section id="presence" class="py-5">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-4" data-key="presence_title">Nuestra Presencia</h2>
+        <div id="presence-map" class="row gx-0">
+          <div class="col-12">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Servicios -->
+    <section id="services" class="py-5 bg-light">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-5" data-key="services_title">Servicios</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col" data-aos="flip-left" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-gear-fill display-4 mb-3 " style="color: #D63438;"></i>
+              <h5 data-key="service_drilling">Perforación Especializada</h5>
+              <p data-key="service_drilling_desc">Flota hidráulica de última generación (Sandvik, Junjin, Soosan) para todo tipo de roca.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="flip-left" data-aos-delay="200">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-exclamation-triangle-fill display-4 mb-3" style="color: #D63438;"></i>
+              <h5 data-key="service_blasting">Voladuras Controladas</h5>
+              <p data-key="service_blasting_desc">Protocolos de voladura garantizando seguridad desde 1.000 m³ hasta 8.000 m³ por operación.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="flip-left" data-aos-delay="300">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-box-seam display-4 mb-3" style="color: #D63438;"></i>
+              <h5 data-key="service_polvorines">Instalación de Polvorines</h5>
+              <p data-key="service_polvorines_desc">Diseño y construcción cumple normativas SUCAMEC en Curimana, Los Reyes y más.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="flip-left" data-aos-delay="400">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-truck display-4 mb-3" style="color: #D63438;"></i>
+              <h5 data-key="service_transport">Transporte de Explosivos</h5>
+              <p data-key="service_transport_desc">Flota de camionetas y camiones certificados según SUCAMEC para traslado seguro.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="flip-left" data-aos-delay="500">
+            <div class="card h-100 border-0 shadow-sm text-center px-3 py-4">
+              <i class="bi bi-box2-fill display-4 mb-3" style="color: #D63438;"></i>
+              <h5 data-key="service_sales">Comercialización de Explosivos</h5>
+              <p data-key="service_sales_desc">Distribución de explosivos FAMESA con capacitación y entrega oportuna.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Certificaciones & Flota -->
+    <section id="certifications" class="py-5">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-4" data-key="certifications_title">Certificaciones & Flota</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-patch-check-fill me-2" style="color: #D63438;"></i><span data-key="certifications_sucamec">Certificaciones SUCAMEC</span></h5>
+                <ul class="list-unstyled mb-0">
+                  <li data-key="certifications_transport">Certificación de transporte de explosivos según SUCAMEC.</li>
+                  <li data-key="certifications_vehicles">Vehículos acondicionados para transporte seguro.</li>
+                  <li data-key="certifications_drivers">Conductores capacitados y certificados.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-truck-front-fill me-2" style="color: #D63438;"></i><span data-key="fleet_title">Flota de Transporte</span></h5>
+                <p data-key="fleet_desc">Camionetas y camiones especializados para traslado de explosivos, cumpliendo normativas de seguridad.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Projectos -->
+    <section id="projects" class="py-5 bg-light">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-5" data-key="projects_title">Proyectos Destacados</h2>
+        <ul class="timeline list-unstyled">
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <span class="timeline-icon" style="color: #D63438;"></span>
+            <div class="timeline-content">
+              <h5 data-key="proj_tia_maria">Minera Tía María</h5>
+              <small data-key="proj_tia_maria_date">Desde Dic 2024</small>
+              <p data-key="proj_tia_maria_desc">Perforación y voladura en vías de acceso y plataformas, diseñando mallas de perforación personalizadas para estabilidad y seguridad.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+            <span class="timeline-icon" style="color: #D63438;"></span>
+            <div class="timeline-content">
+              <h5 data-key="proj_carretera_ayo">Carretera Ayo-Andamayo</h5>
+              <small data-key="proj_carretera_ayo_date">Ago 2022 — Actualidad</small>
+              <p data-key="proj_carretera_ayo_desc">Control de voladuras para construcción de la vía Aplao-Ayo, instalando polvorín seguro cumpliendo SUCAMEC y asesorando en abastecimiento de explosivos.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+            <span class="timeline-icon" style="color: #D63438;"></span>
+            <div class="timeline-content">
+              <h5 data-key="proj_represa_coltani">Represa Coltani</h5>
+              <small data-key="proj_represa_coltani_date">Ago 2023 — Dic 2024</small>
+              <p data-key="proj_represa_coltani_desc">Perforación, voladura y apilación de roca para construcción de sistema de almacenamiento y regulación en el sector de la Quebrada Coltani, administrando polvorín según SUCAMEC.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+            <span class="timeline-icon" style="color: #D63438;"></span>
+            <div class="timeline-content">
+              <h5 data-key="proj_polvorin_curimana">Polvorín Curimana (Ucayali)</h5>
+              <small data-key="proj_polvorin_curimana_date">Ene 2023 — Mayo 2023</small>
+              <p data-key="proj_polvorin_curimana_desc">Diseño y construcción de polvorín cumpliendo normativas, entrega de documentación técnica completa (análisis de riesgos y cronograma de simulacros).</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-aos="fade-up" data-aos-delay="500">
+            <span class="timeline-icon" style="color: #D63438;"></span>
+            <div class="timeline-content">
+              <h5 data-key="proj_polvorin_santacruz">Polvorín Santa Cruz de Andamarca</h5>
+              <small data-key="proj_polvorin_santacruz_date">Set 2023 — Mar 2024</small>
+              <p data-key="proj_polvorin_santacruz_desc">Construcción de polvorín para Minera Volcan en Huaral, con planos y especificaciones técnicas detalladas, cumpliendo estándares SUCAMEC.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4">
+      <div class="container text-center">
+        <p class="mb-3" data-key="footer_copy">© 2025 Grupo Sur del Perú SAC. Todos los derechos reservados.</p>
+        <div>
+          <a href="https://wa.me/51987374470" target="_blank" class="me-3"><i class="bi bi-whatsapp fs-2"></i></a>
+          <a href="mailto:ventas@gruposurdelperu.com.pe"><i class="bi bi-envelope-fill fs-2"></i></a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <!-- Fin de contenido -->
+
+  <!-- Scripts -->
+
+  <!-- Google Maps API -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAO1la-MPCGjkNZZNO-WJe6RmlqrUSmKYA&callback=initMap"
+    async defer>
+  </script>
+  
+  <!--Estilos-->
+  <script>
+    const lightMapStyle = [];  
+    const darkMapStyle = [
+      {
+        featureType: "administrative",
+        elementType: "geometry",
+        stylers: [
+          { color: "#555555" }, //
+          { visibility: "on" }
+        ]
+      },
+      {
+        featureType: "road",
+        elementType: "geometry",
+        stylers: [
+          { color: "#666666" },
+          { lightness: 20 }
+        ]
+      },
+      {
+        featureType: "road.local", 
+        elementType: "geometry",
+        stylers: [
+          { color: "#777777" },
+          { lightness: 40 }
+        ]
+      },
+      {
+        featureType: "water", 
+        elementType: "geometry",
+        stylers: [
+          { color: "#444444" }, 
+          { lightness: -10 }
+        ]
+      },
+      {
+        featureType: "landscape",
+        elementType: "geometry",
+        stylers: [
+          { color: "#333333" },
+          { lightness: -20 }
+        ]
+      }
+    ];
+
+    function initMap() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 6,
+        center: { lat: -15.8402, lng: -71.9386 },
+        styles: isDark ? darkMapStyle : lightMapStyle
+      });
+      window._myGoogleMap = map;
+      const geocoder = new google.maps.Geocoder();
+      const zonas = [
+        { address: "J7G8+3V, 06421, Perú", name: "Cascabamba", city: "Cajamarca", description: "Instalación de polvorín en Minera Cascabamba", imageUrl:"cascabamba.jpeg" },
+        { address: "8PHP+65F, Cerro De Pasco 19001, Perú", name: "Minera Volcan", city: "Lima", description: "Instalación de polvorín en Minera Volcan", imageUrl:"volcan.jpeg" },
+        { address: "Famesa, Puente Piedra 15117, Perú", name: "Famesa", city: "Lima", description: "Comercialización de explosivos de FAMESA", imageUrl:"famesa.jpeg" },
+        { address: "Plaza de armas, COTARUSE 03580, Perú", name: "Minera Pepas de Oro", city: "Apurímac", description: "Instalación de polvorín en Minera Pepas de Oro", imageUrl:"pepas-de-oro.jpeg" },
+        { address: "Curimana 25601, Perú", name: "Curimana", city: "Ucayali", description: "Instalación de polvorín en Curimana para SAExploration", imageUrl:"curimana.jpeg" },
+        { address: "La Rinconada 21355, Perú", name: "La Rinconada", city: "Puno", description: "Instalación de polvorín en La Rinconada", imageUrl:"la-rinconada.jpeg" },
+        { address: "C. Mayta Capac 107, Arequipa 04001, Perú", name: "Minera Los Reyes", city: "Arequipa", description: "Instalación de polvorín en Minera Los Reyes", imageUrl:"los-reyes.jpeg" },
+        { address: "Ayo 04645, Perú", name: "Ayo", city: "Arequipa", description: "Perforación y voladura para la construcción carretera Ayo-Andamayo (Frente de Ayo)", imageUrl:"ayo.jpeg" },
+        { address: "X79C+C3P, Cocachacra 04430, Perú", name: "Tía María", city: "Arequipa", description: "Perforación y voladura en vías de acceso y plataformas en Unidad minera Tía María", imageUrl:"cocachacra.jpeg" },
+        { address: "RHCV+J2R, 23850, Perú", name: "Represa Coltani", city: "Tacna", description: "Perforación, voladura y apilamiento de roca para Represa Coltani", imageUrl:"coltani.jpeg" },
+        { address: "Andamayo 04605, Perú", name: "Andamayo", city: "Arequipa", description: "Perforación y voladura para la construcción carretera Ayo-Andamayo (Frente de Andamayo)", imageUrl:"andamayo.jpeg" }
+      ];
+
+      zonas.forEach(z => {
+        geocoder.geocode({ address: z.address }, (results, status) => {
+          if (status === "OK" && results[0]) {
+            const pos = results[0].geometry.location;
+            const marker = new google.maps.Marker({
+              position: pos,
+              map: map,
+              title: `${z.name} — ${z.city}`,
+              icon: {
+                path: google.maps.SymbolPath.CIRCLE,
+                scale: 8,
+                fillColor: getComputedStyle(document.documentElement).getPropertyValue('--clr-primary').trim(),
+                fillOpacity: 1,
+                strokeWeight: 1,
+                strokeColor: '#fff'
+              }
+            });
+            const infoContent = `
+              <div class="map-info-window">
+                <img src="${z.imageUrl}" alt="${z.name}" style="width:100%; max-width:200px; border-radius:4px; margin-bottom:0.5rem;">
+                <strong>${z.name} — ${z.city}</strong>
+                <p>${z.description}</p>
+              </div>
+            `;
+            const info = new google.maps.InfoWindow({ content: infoContent });
+            marker.addListener('click', () => info.open(map, marker));
+          } else {
+            console.error("Geocode falló para", z.address, status);
+          }
+        });
+      });
+    }
+
+    // Observador para cambiar estilo de mapa al alternar tema
+    new MutationObserver(muts => {
+      muts.forEach(m => {
+        if (m.attributeName === 'data-theme' && window._myGoogleMap) {
+          const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+          window._myGoogleMap.setOptions({ styles: dark ? darkMapStyle : lightMapStyle });
+        }
+      });
+    }).observe(document.documentElement, { attributes: true });
+  </script>
+
+  <!-- Bootstrap y AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  
+  <!-- Main Script: AOS + Theme Toggle only -->
+  <script>
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1) Inicializar AOS 
+      AOS.init({ once: true, duration: 400 });
+
+      // 2) Intercambio de temas y cambio de íconos
+      const root       = document.documentElement;
+      const themeToggle= document.getElementById('themeToggle');
+      const iconTheme  = document.getElementById('iconTheme');
+      const iconMenu   = document.getElementById('iconMenu');
+      const navbar     = document.getElementById('mainNav');
+      const inputs     = document.querySelectorAll('#contact .form-control');
+
+      function updateThemeUI() {
+        if (root.getAttribute('data-theme') === 'light') {
+          // Modo Claro
+          iconTheme.className = 'bi bi-moon-fill fs-4';
+          iconTheme.style.color = '#D63438';
+          iconMenu.style.color  = '#D63438';
+          navbar.style.background      = 'rgba(254,254,254,0.8)';
+          navbar.style.backdropFilter  = 'blur(10px)';
+          inputs.forEach(i => {
+            i.style.backgroundColor = '#FFFFFF';
+            i.style.color = '#282829';
+          });
+        } else {
+          // Modo Oscuro
+          iconTheme.className = 'bi bi-sun-fill fs-4';
+          iconTheme.style.color = '#D63438';
+          iconMenu.style.color  = '#D63438';
+          navbar.style.background      = 'rgba(40,40,41,0.8)';
+          navbar.style.backdropFilter  = 'blur(10px)';
+          inputs.forEach(i => {
+            i.style.backgroundColor = '#404040';
+            i.style.color = '#FEFEFE';
+          });
+        }
+
+        // Colorear otros íconos (offcanvas, carrusel, etc.)
+        const closeIcon = document.getElementById('closeMenuIcon');
+        const prevIcon  = document.getElementById('equipPrev');
+        const nextIcon  = document.getElementById('equipNext');
+        const arrowColor = '#D63438';
+
+        if (closeIcon) closeIcon.style.color = arrowColor;
+        if (prevIcon)  prevIcon.style.color  = arrowColor;
+        if (nextIcon)  nextIcon.style.color  = arrowColor;
+      }
+
+      // Inicializar estado de tema
+      updateThemeUI();
+
+      themeToggle.addEventListener('click', () => {
+        const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', nextTheme);
+        localStorage.setItem('theme', nextTheme); // ⬅ Guardar en navegador
+        updateThemeUI();
+      });
+
+      // Offcanvas menu blur
+      const offcanvasEl = document.getElementById('offcanvasMenu');
+      offcanvasEl.addEventListener('show.bs.offcanvas',   () => document.getElementById('content').classList.add('blur-bg'));
+      offcanvasEl.addEventListener('hidden.bs.offcanvas', () => document.getElementById('content').classList.remove('blur-bg'));
+
+      // Offcanvas links smooth scroll
+      document.querySelectorAll('.offcanvas .nav-link').forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href').substring(1);
+          const targetEl = document.getElementById(targetId);
+          if (targetEl) {
+            bootstrap.Offcanvas.getOrCreateInstance(offcanvasEl).hide();
+            setTimeout(() => targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 250);
+          }
+        });
+      });
+
+    });
+  </script>
