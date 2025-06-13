@@ -166,6 +166,41 @@ a:hover {
   width: 100%;
 }
 
+
+@media (max-width: 991.98px) {
+  #mainNav .container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    position: relative !important;  
+  }
+
+  #mainNav .navbar-brand {
+    position: absolute !important;
+    left: 30% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  #mainNav #themeToggle,
+  #mainNav .btn.d-lg-none {
+    position: absolute !important;
+    top: 70% !important;
+    transform: translateY(-35%) !important;
+  }
+
+  #mainNav #themeToggle {
+    right: 4rem !important;
+  }
+
+  #mainNav .btn.d-lg-none {
+    right: 1.5rem !important;
+  }
+}
+
+#closeMenuIcon {
+  color: var(--clr-primary) !important;
+}
+
 /* MODOS DE PAGINA */
 #themeToggle i,
 #langToggle i,
