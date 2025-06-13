@@ -27,7 +27,7 @@
         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">Nosotros</a></li>
         <li class="nav-item"><a class="nav-link" href="services.html">Servicios</a></li>
-        <li class="nav-item"><a class="nav-link" href="team.html">Equipo</a></li>
+        <li class="nav-item"><a class="nav-link active" href="team.html">Equipo</a></li>
         <li class="nav-item"><a class="nav-link" href="index.html#contact">Contacto</a></li>
       </ul>
     </div>
@@ -210,95 +210,54 @@
     async defer>
   </script>
   
-  <!--Estilos-->
-
-  <!-- Bootstrap y AOS -->
+ <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  
-  <!-- Main Script: AOS + Theme Toggle only -->
   <script>
+    // ScrollSpy
+    bootstrap.ScrollSpy.getOrCreateInstance(document.body, {
+      target: '#mainNav',
+      offset: 80
+    });
+
+    // Tema guardado
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      document.documentElement.setAttribute('data-theme', savedTheme);
-    }
+    if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
 
     document.addEventListener('DOMContentLoaded', () => {
-      // 1) Inicializar AOS 
       AOS.init({ once: true, duration: 400 });
 
-      // 2) Intercambio de temas y cambio de íconos
-      const root       = document.documentElement;
-      const themeToggle= document.getElementById('themeToggle');
-      const iconTheme  = document.getElementById('iconTheme');
-      const iconMenu   = document.getElementById('iconMenu');
-      const navbar     = document.getElementById('mainNav');
-      const inputs     = document.querySelectorAll('#contact .form-control');
+      const root        = document.documentElement;
+      const themeToggle = document.getElementById('themeToggle');
+      const iconTheme   = document.getElementById('iconTheme');
+      const iconMenu    = document.getElementById('iconMenu');
+      const navbar      = document.getElementById('mainNav');
+      const offcanvasEl = document.getElementById('offcanvasMenu');
+      const content     = document.getElementById('content');
 
       function updateThemeUI() {
-        if (root.getAttribute('data-theme') === 'light') {
-          // Modo Claro
-          iconTheme.className = 'bi bi-moon-fill fs-4';
-          iconTheme.style.color = '#D63438';
-          iconMenu.style.color  = '#D63438';
-          navbar.style.background      = 'rgba(254,254,254,0.8)';
-          navbar.style.backdropFilter  = 'blur(10px)';
-          inputs.forEach(i => {
-            i.style.backgroundColor = '#FFFFFF';
-            i.style.color = '#282829';
-          });
-        } else {
-          // Modo Oscuro
-          iconTheme.className = 'bi bi-sun-fill fs-4';
-          iconTheme.style.color = '#D63438';
-          iconMenu.style.color  = '#D63438';
-          navbar.style.background      = 'rgba(40,40,41,0.8)';
-          navbar.style.backdropFilter  = 'blur(10px)';
-          inputs.forEach(i => {
-            i.style.backgroundColor = '#404040';
-            i.style.color = '#FEFEFE';
-          });
-        }
-
-        // Colorear otros íconos (offcanvas, carrusel, etc.)
-        const closeIcon = document.getElementById('closeMenuIcon');
-        const prevIcon  = document.getElementById('equipPrev');
-        const nextIcon  = document.getElementById('equipNext');
-        const arrowColor = '#D63438';
-
-        if (closeIcon) closeIcon.style.color = arrowColor;
-        if (prevIcon)  prevIcon.style.color  = arrowColor;
-        if (nextIcon)  nextIcon.style.color  = arrowColor;
+        const isLight = root.getAttribute('data-theme') === 'light';
+        iconTheme.className = isLight ? 'bi bi-moon-fill fs-4' : 'bi bi-sun-fill fs-4';
+        iconTheme.style.color = iconMenu.style.color = '#D63438';
+        navbar.style.background = isLight ? 'rgba(254,254,254,0.8)' : 'rgba(40,40,41,0.8)';
+        navbar.style.backdropFilter = 'blur(10px)';
       }
-
-      // Inicializar estado de tema
       updateThemeUI();
 
       themeToggle.addEventListener('click', () => {
-        const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        root.setAttribute('data-theme', nextTheme);
-        localStorage.setItem('theme', nextTheme); 
+        const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
         updateThemeUI();
       });
 
-      // Offcanvas menu blur
-      const offcanvasEl = document.getElementById('offcanvasMenu');
-      offcanvasEl.addEventListener('show.bs.offcanvas',   () => document.getElementById('content').classList.add('blur-bg'));
-      offcanvasEl.addEventListener('hidden.bs.offcanvas', () => document.getElementById('content').classList.remove('blur-bg'));
-
-      // Offcanvas links smooth scroll
-      document.querySelectorAll('.offcanvas .nav-link').forEach(link => {
-        link.addEventListener('click', e => {
-          e.preventDefault();
-          const targetId = link.getAttribute('href').substring(1);
-          const targetEl = document.getElementById(targetId);
-          if (targetEl) {
-            bootstrap.Offcanvas.getOrCreateInstance(offcanvasEl).hide();
-            setTimeout(() => targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 250);
-          }
-        });
-      });
-
+      // Offcanvas blur
+      offcanvasEl.addEventListener('show.bs.offcanvas',   () => content.classList.add('blur-bg'));
+      offcanvasEl.addEventListener('hidden.bs.offcanvas', () => content.classList.remove('blur-bg'));
     });
   </script>
+</body>
+</html>
+
+
 
